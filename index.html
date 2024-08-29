@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    
+    <title>YueAgar_c's website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="animations.css">
+    <script src="loader.js"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="nav-logo">
+            <a href="#profile" class="tr" data-tr="profile">YueAgar_c</a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about" class="tr" data-tr="about">About</a></li>
+                <li><a href="#coursework" class="tr" data-tr="coursework">Coursework</a></li>
+                <li><a href="#projects" class="tr" data-tr="projects">Projects</a></li>
+                <li><a href="#contact" class="tr" data-tr="contact">Contact</a></li>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                    <option value="jp">日本語</option>
+                </select>
+            </ul>
+        </div>
+    </nav>
+    <nav id=hamburger-nav>
+        <div class="nav-logo">
+            <a href="#profile" class="tr" data-tr="profile">YueAgar_c</a>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" class="tr" data-tr="about">About</a></li>
+                <li><a href="#coursework" class="tr" data-tr="coursework">Coursework</a></li>
+                <li><a href="#projects" class="tr" data-tr="projects">Projects</a></li>
+                <li><a href="#contact" class="tr" data-tr="contact">Contact</a></li>
+                <center>
+                    <select id="language">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </center>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="profile-pics">
+            <img class="avatar spin" src="assets/profile.png" alt="Profile picture">
+        </div>
+        <div class="profile-texts">
+            <p class="profile-text-1 tr" data-tr="profile-text-1">Console says: Hello World.</p>
+            <p class="profile-text-2 tr" data-tr="profile-text-2">I'm YueAgar_c.</p>
+            <p class="profile-text-3">27' <a href="https://www.cse.cuhk.edu.hk/admission/cscin/">CSCI</a> @ <a href="https://www.cuhk.edu.hk/">CUHK</a>.</p>
+            <div class="profile-btns">
+                <button class="profile-btn tr" onclick="window.open('./assets/resume.pdf');" data-tr="profile-btn-resume">View my resume</button>
+            </div>
+            <div class="profile-sms">
+                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="profile-sms-img" onclick="window.open('https://www.linkedin.com/in/yueagar');">
+                <img src="./assets/github.png" alt="My GitHub Profile" class="profile-sms-img" onclick="window.open('https://github.com/yueagar');">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p>about: lazy, still under construction</p>
+    </section>
+    <section id="coursework">
+        <p>coursework: lazy, still under construction</p>
+    </section>
+    <section id="projects">
+        <p>projects: lazy, still under construction</p>
+    </section>
+    <section id="contact">
+        <p>contact: lazy, still under construction</p>
+    </section>
+</body>
+</html>

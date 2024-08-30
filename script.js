@@ -94,6 +94,16 @@ class Language {
             "about-text-6": "Achievements and Awards",
             "about-text-7": "Dean's List 2023-24",
             "about-text-8": "Hello World. I am YueAgar_c (or Yue Ka Leung Kelvin in real life). I am a 20 years old passionate computer science student and I look forward to becoming a professional software engineer in the future.",
+            "coursework-text-1": "I took these",
+            "coursework-text-2": "Courses",
+            "coursework-text-3": "Introduction to Computer Science",
+            "coursework-text-4": "Coursework source code",
+            "coursework-text-5": "Problem Solving By Programming",
+            "coursework-text-6": "Digital Logic and Systems",
+            "coursework-text-7": "Digital Literacy and Computational Thinking—P",
+            "coursework-text-8": "Linear Algebra for Engineers",
+            "coursework-text-9": "Multivariable Calculus for Engineers",
+            "coursework-text-10": "Calculus for Engineers",
             "working": "Still under construction"
         };
         this.zh = {
@@ -113,12 +123,22 @@ class Language {
             "about-text-6": "成就與獎項",
             "about-text-7": "院長嘉許名單 2023-24",
             "about-text-8": "你好世界。我是YueAgar_c (現實中我的名字是Yue Ka Leung Kelvin)。我是一名20歲的計算機科學學生，正在努力學習並朝着成為專業軟件工程師的目標進發。",
+            "coursework-text-1": "我修讀了這些",
+            "coursework-text-2": "課程",
+            "coursework-text-3": "計算機科學導論",
+            "coursework-text-4": "課業源碼",
+            "coursework-text-5": "程式設計與解難",
+            "coursework-text-6": "數位邏輯及數字系統",
+            "coursework-text-7": "數碼素養及計算思維—P",
+            "coursework-text-8": "線性代數及其工程應用",
+            "coursework-text-9": "多元微積分及其工程應用",
+            "coursework-text-10": "微積分的工程應用",
             "working": "還沒寫好"
         };
         this.jp = {
             "title": "YueAgar_cのウェブサイト",
             "about": "私について",
-            "coursework": "課題",
+            "coursework": "授業と課題",
             "projects": "プロジェクト",
             "contact": "連絡",
             "profile-text-1": "コンソール：こんにちは、世界。",
@@ -132,6 +152,16 @@ class Language {
             "about-text-6": "賞",
             "about-text-7": "成績優秀者 2023-24",
             "about-text-8": "こんにちは、世界。YueAgar_cです (現実の名前はYue Ka Leung Kelvinです)。私は20歳の情熱的な情報工学学生で、将来はプロのソフトウェアエンジニアになることを楽しみにしています。",
+            "coursework-text-1": "受けた",
+            "coursework-text-2": "授業",
+            "coursework-text-3": "情報工学概論",
+            "coursework-text-4": "課題のソースコード",
+            "coursework-text-5": "プログラミングで問題を解決する",
+            "coursework-text-6": "ディジタル論理とシステム",
+            "coursework-text-7": "デジタルリテラシーと計算思考—P",
+            "coursework-text-8": "エンジニアのための線形代数",
+            "coursework-text-9": "エンジニアのための多変数微積分",
+            "coursework-text-10": "エンジニアのための微積分",
             "working": "まだ建設中です。"
         };
         this.load();

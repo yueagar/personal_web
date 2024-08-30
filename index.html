@@ -44,13 +44,11 @@
                 <li><a href="#coursework" class="tr" data-tr="coursework">Coursework</a></li>
                 <li><a href="#projects" class="tr" data-tr="projects">Projects</a></li>
                 <li><a href="#contact" class="tr" data-tr="contact">Contact</a></li>
-                <center>
-                    <select id="language">
-                        <option value="en">English</option>
-                        <option value="zh">中文</option>
-                        <option value="jp">日本語</option>
-                    </select>
-                </center>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                    <option value="jp">日本語</option>
+                </select>
             </div>
         </div>
     </nav>
@@ -61,7 +59,7 @@
         <div class="profile-texts">
             <p class="text-1 tr" data-tr="profile-text-1">Console says: Hello World.</p>
             <p class="text-2 tr" data-tr="profile-text-2">I'm YueAgar_c.</p>
-            <p class="text-3">27' <a href="https://www.cse.cuhk.edu.hk/admission/cscin/">CSCI</a> @ <a href="https://www.cuhk.edu.hk/">CUHK</a>.</p>
+            <p class="text-3">27' <a href="https://www.cse.cuhk.edu.hk/admission/cscin/" target="_blank">CSCI</a> @ <a href="https://www.cuhk.edu.hk/" target="_blank">CUHK</a>.</p>
             <div class="profile-btns">
                 <button class="profile-btn tr" onclick="window.open('./assets/resume.pdf');" data-tr="profile-btn-resume">View my resume</button>
             </div>
@@ -85,9 +83,10 @@
                     <div class="about-education">
                         <img src="./assets/education.png" alt="Education icon" class="about-icon">
                         <p class="text-4 tr" data-tr="about-text-3">Education</p>
-                        <p class="text-5 tr" data-tr="about-text-4">The Chinese University of Hong Kong</p>
+                        <a href="https://www.cuhk.edu.hk/" target="_blank" class="text-5 tr" data-tr="about-text-4">The Chinese University of Hong Kong</a>
+                        <br>
                         <!--<hr>-->
-                        <p class="text-5 tr" data-tr="about-text-5">Bachelor of Science in Computer Science</p>
+                        <a href="https://www.cse.cuhk.edu.hk/admission/cscin/" target="_blank" class="text-5 tr" data-tr="about-text-5">Bachelor of Science in Computer Science</a>
                         <!--<hr>-->
                         <p class="text-5 tr">2023 - 2027</p>
                     </div>
@@ -104,8 +103,93 @@
         </div>
     </section>
     <section id="coursework">
-        <p class="tr" data-tr="coursework">coursework: </p>
-        <p class="tr" data-tr="working">still under construction</p>
+        <div class="coursework-texts">
+            <p class="text-1 tr" data-tr="coursework-text-1">I took these</p>
+            <p class="text-2 tr" data-tr="coursework-text-2">Courses</p>
+        </div>
+        <div class="coursework-container">
+            <div class="coursework-computer">
+                <div class="coursework-programming">
+                    <div class="coursework-course">
+                        <div class="coursework-info">
+                            <a href="https://cs50.harvard.edu/x/2023/" class="text-6">CS50x</a>
+                            <text class="text-6">Harvard — 2023</text>
+                        </div>
+                        <div class="coursework-description">
+                            <div>
+                                <p class="text-5 tr" data-tr="coursework-text-3">Introduction to Computer Science<br></p>
+                                <a href="https://github.com/yueagar/my_cs50_code" target="_blank" class="text-5 tr" data-tr="coursework-text-4">Coursework source code</a>
+                            </div>
+                            <text class="text-4">100%</text>
+                        </div>
+                    </div>
+                    <div class="coursework-course">
+                        <div class="coursework-info">
+                            <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1110.pdf" class="text-6">ENGG1110</a>
+                            <text class="text-6">CUHK — 2023</text>
+                        </div>
+                        <div class="coursework-description">
+                            <p class="text-5 tr" data-tr="coursework-text-5">Problem Solving By Programming</p>
+                            <text class="text-4">A</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="coursework-bcsen">
+                    <div class="coursework-course">
+                        <div class="coursework-info">
+                            <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG2020.pdf" class="text-6">ENGG2020</a>
+                            <text class="text-6">CUHK — 2024</text>
+                        </div>
+                        <div class="coursework-description">
+                            <p class="text-5 tr" data-tr="coursework-text-6">Digital Logic and Systems</p>
+                            <text class="text-4">A</text>
+                        </div>
+                    </div>
+                    <div class="coursework-course">
+                        <div class="coursework-info">
+                            <a href="https://dlct.cse.cuhk.edu.hk/1003registration.php" class="text-6">ENGG1003</a>
+                            <text class="text-6">CUHK — 2023</text>
+                        </div>
+                        <div class="coursework-description">
+                            <p class="text-5 tr" data-tr="coursework-text-7">Digital Literacy and Computational Thinking—P</p>
+                            <text class="text-4">Distinction</text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coursework-maths">
+                <div class="coursework-course">
+                    <div class="coursework-info">
+                        <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1120.pdf" class="text-6">ENGG1120</a>
+                        <text class="text-6">CUHK — 2024</text>
+                    </div>
+                    <div class="coursework-description">
+                        <p class="text-5 tr" data-tr="coursework-text-8">Linear Algebra for Engineers</p>
+                        <text class="text-4">A-</text>
+                    </div>
+                </div>
+                <div class="coursework-course">
+                    <div class="coursework-info">
+                        <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1130.pdf" class="text-6">ENGG1130</a>
+                        <text class="text-6">CUHK — 2024</text>
+                    </div>
+                    <div class="coursework-description">
+                        <p class="text-5 tr" data-tr="coursework-text-9">Multivariable Calculus for Engineers</p>
+                        <text class="text-4">A-</text>
+                    </div>
+                </div>
+                <div class="coursework-course">
+                    <div class="coursework-info">
+                        <a href="https://www.math.cuhk.edu.hk/course/math1510" class="text-6">MATH1510</a>
+                        <text class="text-6">CUHK — 2023</text>
+                    </div>
+                    <div class="coursework-description">
+                        <p class="text-5 tr" data-tr="coursework-text-10">Calculus for Engineers</p>
+                        <text class="text-4">A-</text>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="projects">
         <p class="tr" data-tr="projects">projects: </p>
@@ -115,5 +199,8 @@
         <p class="tr" data-tr="contact">contact: </p>
         <p class="tr" data-tr="working">still under construction</p>
     </section>
+    <footer>
+        <p class="text-4">© 2024 YueAgar_c</p>
+    </footer>
 </body>
 </html>

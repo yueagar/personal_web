@@ -23,6 +23,10 @@ a {
     color: rgb(85, 85, 85);
 }
 
+hr {
+    width: 0%;
+}
+
 .active {
     background-color: rgb(222, 222, 222);
 }
@@ -183,8 +187,10 @@ a:hover {
 /* Sections */
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
+    position: relative;
+    padding-top: 12vh;
+    margin-top: -12vh;
+    height: 100vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -208,6 +214,8 @@ section {
 
 .avatar {
     border-radius: 100%;
+    width: 400px;
+    height: 400px;
 }
 
 .profile-texts {
@@ -215,19 +223,19 @@ section {
     text-align: center;
 }
 
-.profile-texts p {
+.profile-texts p, .about-texts p {
     font-weight: 600;
 }
 
-.profile-text-1 {
+.text-1 {
     font-size: 1.5rem;
 }
 
-.profile-text-2 {
+.text-2 {
     font-size: 3rem;
 }
 
-.profile-text-3 {
+.text-3 {
     font-size: 2.1rem;
 }
 
@@ -264,4 +272,63 @@ section {
 .profile-sms-img:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+}
+
+/* About */
+#about {
+    position: relative;
+}
+
+.about-texts {
+    align-self: flex-start;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    gap: 4rem;
+    height: 80%;
+}
+
+.about-pics {
+    width: 400px;
+    height: 400px;
+    margin: auto 0;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-education, .about-achievements {
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 2rem;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+}
+
+.about-icon {
+    border-radius: 100%;
+    height: 3rem;
+    margin-top: -0.4rem;
+    margin-bottom: -0.6rem;
+}
+
+.text-4 {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.text-5 {
+    font-size: 1rem;
 }

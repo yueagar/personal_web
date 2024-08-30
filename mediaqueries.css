@@ -2,18 +2,18 @@
     #profile {
         gap: 2rem;
     }
-    .profile-text-1 {
+    .text-1 {
         font-size: 0.6rem;
     }
-    .profile-text-2 {
+    .text-2 {
         font-size: 1.2rem;
     }
-    .profile-text-3 {
+    .text-3 {
         font-size: 0.9rem;
     }
-    .profile-pics, .avatar {
-        height: 120px;
-        width: 120px;
+    .profile-pics, .about-pics, .avatar {
+        height: 180px;
+        width: 180px;
     }
     .profile-btns, .profile-sms {
         margin-top: 0.8rem;
@@ -32,16 +32,16 @@
     #profile {
         gap: 4rem;
     }
-    .profile-text-1 {
+    .text-1 {
         font-size: 0.7rem;
     }
-    .profile-text-2 {
+    .text-2 {
         font-size: 1.3rem;
     }
-    .profile-text-3 {
+    .text-3 {
         font-size: 1.0rem;
     }
-    .profile-pics, .avatar {
+    .profile-pics, .about-pics, .avatar {
         height: 200px;
         width: 200px;
     }
@@ -51,16 +51,16 @@
     #profile {
         gap: 4rem;
     }
-    .profile-text-1 {
+    .text-1 {
         font-size: 0.8rem;
     }
-    .profile-text-2 {
+    .text-2 {
         font-size: 1.6rem;
     }
-    .profile-text-3 {
+    .text-3 {
         font-size: 1.2rem;
     }
-    .profile-pics, .avatar {
+    .profile-pics, .about-pics, .avatar {
         height: 240px;
         width: 240px;
     }
@@ -70,16 +70,16 @@
     #profile {
         gap: 6rem;
     }
-    .profile-text-1 {
+    .text-1 {
         font-size: 1rem;
     }
-    .profile-text-2 {
+    .text-2 {
         font-size: 2rem;
     }
-    .profile-text-3 {
+    .text-3 {
         font-size: 1.5rem;
     }
-    .profile-pics, .avatar {
+    .profile-pics, .about-pics, .avatar {
         height: 300px;
         width: 300px;
     }
@@ -92,4 +92,33 @@
     #hamburger-nav {
         display: flex;
     }
+    section {
+        margin: 0 5%;
+    }
+    #profile, .about-container {
+        display: block;
+    }
+    #about {
+        height: fit-content;
+    }
+    .about-stats {
+        margin-top: 0;
+    }
+    .profile-pics, .about-pics {
+        margin: 0 auto 2rem;
+        padding-top: 2rem;
+    }
 }
+
+@media screen and (max-width: 1400px) {
+    .about-stats {
+        margin-top: 0;
+        flex-wrap: wrap;
+    }
+}
+
+/*@media screen and (max-width: 1600px) {
+    hr {
+        width: 100%;
+    }
+}*/

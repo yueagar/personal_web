@@ -64,8 +64,12 @@
                 <button class="profile-btn tr" onclick="window.open('./assets/resume.pdf');" data-tr="profile-btn-resume">View my resume</button>
             </div>
             <div class="profile-sms">
-                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="profile-sms-img" onclick="window.open('https://www.linkedin.com/in/yueagar');">
-                <img src="./assets/github.png" alt="My GitHub Profile" class="profile-sms-img" onclick="window.open('https://github.com/yueagar');">
+                <a href="https://www.linkedin.com/in/yueagar" target="_blank">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="profile-sms-img" onclick="window.open('https://www.linkedin.com/in/yueagar');">
+                </a>
+                <a href="https://github.com/yueagar" target="_blank">
+                    <img src="./assets/github.png" alt="My GitHub Profile" class="profile-sms-img" onclick="window.open('https://github.com/yueagar');">
+                </a>
             </div>
         </div>
     </section>
@@ -112,7 +116,7 @@
                 <div class="coursework-programming">
                     <div class="coursework-course">
                         <div class="coursework-info">
-                            <a href="https://cs50.harvard.edu/x/2023/" class="text-6">CS50x</a>
+                            <a href="https://cs50.harvard.edu/x/2023/" target="_blank" class="text-6">CS50x</a>
                             <text class="text-6">Harvard — 2023</text>
                         </div>
                         <div class="coursework-description">
@@ -125,7 +129,7 @@
                     </div>
                     <div class="coursework-course">
                         <div class="coursework-info">
-                            <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1110.pdf" class="text-6">ENGG1110</a>
+                            <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1110.pdf" target="_blank" class="text-6">ENGG1110</a>
                             <text class="text-6">CUHK — 2023</text>
                         </div>
                         <div class="coursework-description">
@@ -137,7 +141,7 @@
                 <div class="coursework-bcsen">
                     <div class="coursework-course">
                         <div class="coursework-info">
-                            <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG2020.pdf" class="text-6">ENGG2020</a>
+                            <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG2020.pdf" target="_blank" class="text-6">ENGG2020</a>
                             <text class="text-6">CUHK — 2024</text>
                         </div>
                         <div class="coursework-description">
@@ -147,7 +151,7 @@
                     </div>
                     <div class="coursework-course">
                         <div class="coursework-info">
-                            <a href="https://dlct.cse.cuhk.edu.hk/1003registration.php" class="text-6">ENGG1003</a>
+                            <a href="https://dlct.cse.cuhk.edu.hk/1003registration.php" target="_blank" class="text-6">ENGG1003</a>
                             <text class="text-6">CUHK — 2023</text>
                         </div>
                         <div class="coursework-description">
@@ -160,7 +164,7 @@
             <div class="coursework-maths">
                 <div class="coursework-course">
                     <div class="coursework-info">
-                        <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1120.pdf" class="text-6">ENGG1120</a>
+                        <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1120.pdf" target="_blank" class="text-6">ENGG1120</a>
                         <text class="text-6">CUHK — 2024</text>
                     </div>
                     <div class="coursework-description">
@@ -170,7 +174,7 @@
                 </div>
                 <div class="coursework-course">
                     <div class="coursework-info">
-                        <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1130.pdf" class="text-6">ENGG1130</a>
+                        <a href="https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/ENGG1130.pdf" target="_blank" class="text-6">ENGG1130</a>
                         <text class="text-6">CUHK — 2024</text>
                     </div>
                     <div class="coursework-description">
@@ -180,7 +184,7 @@
                 </div>
                 <div class="coursework-course">
                     <div class="coursework-info">
-                        <a href="https://www.math.cuhk.edu.hk/course/math1510" class="text-6">MATH1510</a>
+                        <a href="https://www.math.cuhk.edu.hk/course/math1510" target="_blank" class="text-6">MATH1510</a>
                         <text class="text-6">CUHK — 2023</text>
                     </div>
                     <div class="coursework-description">
@@ -192,12 +196,61 @@
         </div>
     </section>
     <section id="projects">
-        <p class="tr" data-tr="projects">projects: </p>
-        <p class="tr" data-tr="working">still under construction</p>
+        <div class="projects-texts">
+            <p class="text-1 tr" data-tr="projects-text-1">Explore my</p>
+            <p class="text-2 tr" data-tr="projects-text-2">Projects</p>
+        </div>
+        <div class="projects-container">
+            <div class="projects-project">
+                <div class="projects-img" style="background-image: url('./assets/project-1.png')" onclick="window.open('../hslo');">
+                    <img src="./assets/project-1.png" alt="Project 1">
+                </div>
+                <div class="projects-info">
+                    <a class="text-6" href="../hslo" target="_blank">Agar.io HSLO</a>
+                    <text class="text-6">2019 - 2022</text>
+                </div>
+                <div class="projects-description">
+                    <p class="text-5 tr" data-tr="projects-text-3">Source code is not available because others also worked in this project and they did not agree to share it.</p>
+                </div>
+            </div>
+            <div class="projects-project">
+                <div class="projects-img" style="background-image: url('./assets/project-2.png')" onclick="window.open('../minigame');">
+                    <img src="./assets/project-2.png" alt="Project 2">
+                </div>
+                <div class="projects-info">
+                    <a class="text-6" href="../minigame" target="_blank">Dot Minigame</a>
+                    <a href="https://github.com/yueagar/minigame" target="_blank">
+                        <img class="profile-sms-img" src="./assets/github.png" alt="GitHub Repo" onclick="window.open('https://github.com/yueagar/minigame');">
+                    </a>
+                    <text class="text-6">2020</text>
+                </div>
+                <div class="projects-description">
+                    <p class="text-5 tr" data-tr="projects-text-4">Inspired by agar.io.</p>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="contact">
-        <p class="tr" data-tr="contact">contact: </p>
-        <p class="tr" data-tr="working">still under construction</p>
+        <div class="contact-texts">
+            <p class="text-1 tr" data-tr="contact-text-1">Interested?</p>
+            <p class="text-2 tr" data-tr="contact-text-2">Contact Me!</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <a href="mailto:klyue@link.cuhk.edu.hk">
+                        <img src="./assets/email.png" alt="Email" class="contact-method-img">
+                    </a>
+                    <a href="mailto:klyue@link.cuhk.edu.hk">
+                        <p class="text-1">klyue@link.cuhk.edu.hk</p>
+                    </a>
+                </div>
+                <div class="contact-method">
+                    <img src="./assets/discord.png" alt="Discord" class="contact-method-img">
+                    <p class="text-1">yueagar_c</p>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <p class="text-4">© 2024 YueAgar_c</p>

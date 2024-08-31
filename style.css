@@ -162,10 +162,15 @@ a:hover {
 
 .menu-links li {
     list-style: none;
+    width: 100%;
 }
 
 .menu-links.open {
     max-height: 300px;
+}
+
+.menu-links select {
+    width: 100%;
 }
 
 .hamburger-icon.open span:first-child {
@@ -292,7 +297,6 @@ section {
 }
 
 .about-texts {
-    align-self: flex-start;
     text-align: center;
 }
 
@@ -351,7 +355,6 @@ section {
 }
 
 .coursework-texts {
-    align-self: flex-start;
     text-align: center;
 }
 
@@ -366,6 +369,10 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+}
+
+.coursework-course {
+    padding-bottom: 0.4rem;
 }
 
 .coursework-computer {
@@ -394,7 +401,96 @@ section {
     position: relative;
 }
 
+.projects-texts {
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    height: 80%;
+}
+
+.projects-project {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 2rem;
+    padding: 1rem;
+    flex: 1;
+    margin: 1rem;
+}
+
+.projects-img {
+    border-radius: 2rem;
+    cursor: pointer;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.projects-img img {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0;
+}
+
+.projects-info img {
+    border-radius: 100%;
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.projects-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.projects-description {
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* Contact */
 #contact {
     position: relative;
+}
+
+.contact-texts {
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: -4rem;
+    height: 80%;
+}
+
+.contact-methods {
+    flex-direction: column;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-method {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.4rem;
+}
+
+.contact-method-img {
+    width: 2.4rem;
+    height: 2.4rem;
+    padding-right: 0.4rem;
 }

@@ -1,8 +1,10 @@
 class Navigation {
     constructor() {
         this.HamburgerIcon = document.querySelector(".hamburger-icon");
+        this.NavLogo = document.querySelectorAll(".nav-logo");
         this.NavLinks = document.querySelector(".nav-links");
         this.MenuLinks = document.querySelectorAll(".menu-links");
+        this.Sections = document.querySelectorAll("section");
         this.OpenedMenu = false;
         this.focus = "about";
         this.addEvents();
@@ -18,11 +20,21 @@ class Navigation {
         this.HamburgerIcon.addEventListener("click", () => {
             this.toggleMenu();
         });
+        this.NavLogo.forEach(element => {
+            element.addEventListener("click", () => {
+                this.closeMenu();
+            });
+        });
         this.MenuLinks.forEach(element => {
             element.childNodes.forEach(child => {
                 child.nodeName == "LI" && child.addEventListener("click", () => {
                     this.closeMenu();
                 });
+            });
+        });
+        this.Sections.forEach(element => {
+            element.addEventListener("click", () => {
+                this.closeMenu();
             });
         });
     }
@@ -104,6 +116,12 @@ class Language {
             "coursework-text-8": "Linear Algebra for Engineers",
             "coursework-text-9": "Multivariable Calculus for Engineers",
             "coursework-text-10": "Calculus for Engineers",
+            "projects-text-1": "Explore my",
+            "projects-text-2": "Projects",
+            "projects-text-3": "Source code is not available because others also worked in this project and they did not agree to share it.",
+            "projects-text-4": "Inspired by agar.io.",
+            "contact-text-1": "Interested?",
+            "contact-text-2": "Contact Me!",
             "working": "Still under construction"
         };
         this.zh = {
@@ -133,6 +151,12 @@ class Language {
             "coursework-text-8": "線性代數及其工程應用",
             "coursework-text-9": "多元微積分及其工程應用",
             "coursework-text-10": "微積分的工程應用",
+            "projects-text-1": "探索我的",
+            "projects-text-2": "專案",
+            "projects-text-3": "由於其他參與了這個專案的人不同意分享源碼，因此不提供源碼連結。",
+            "projects-text-4": "靈感來自agar.io。",
+            "contact-text-1": "感興趣嗎？",
+            "contact-text-2": "聯絡我！",
             "working": "還沒寫好"
         };
         this.jp = {
@@ -157,11 +181,17 @@ class Language {
             "coursework-text-3": "情報工学概論",
             "coursework-text-4": "課題のソースコード",
             "coursework-text-5": "プログラミングで問題を解決する",
-            "coursework-text-6": "ディジタル論理とシステム",
+            "coursework-text-6": "デジタル論理とシステム",
             "coursework-text-7": "デジタルリテラシーと計算思考—P",
             "coursework-text-8": "エンジニアのための線形代数",
             "coursework-text-9": "エンジニアのための多変数微積分",
             "coursework-text-10": "エンジニアのための微積分",
+            "projects-text-1": "私の",
+            "projects-text-2": "プロジェクトを見る",
+            "projects-text-3": "他の人もこのプロジェクトで働いており、彼らはそれを共有することに同意していないため、ソースコードは提供されていません。",
+            "projects-text-4": "agar.ioからインスピレーションを受けました。",
+            "contact-text-1": "興味がありますか？",
+            "contact-text-2": "連絡してください！",
             "working": "まだ建設中です。"
         };
         this.load();

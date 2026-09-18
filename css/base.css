@@ -1,101 +1,227 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+/* Reset, typography and the page shell. */
 
-/* Change a value here and it applies everywhere. */
-:root {
-    --font-body: "Noto Serif JP", serif;
-
-    --color-text: rgb(85, 85, 85);
-    --color-heading: rgb(0, 0, 0);
-    --color-border: rgb(53, 53, 53);
-    --color-muted: rgb(140, 140, 140);
-    --color-surface: rgb(255, 255, 255);
-    --color-tag: rgb(240, 240, 240);
-    --color-active: rgb(222, 222, 222);
-
-    --radius-card: 2rem;
-    --radius-tag: 1rem;
-
-    --nav-height: 12vh;
-    --section-padding: 0 10rem;
-    --gap-card: 2rem;
-
-    --size-avatar: 400px;
-    --size-icon: 3rem;
-
-    --text-1: 1.5rem;
-    --text-2: 3rem;
-    --text-3: 2.1rem;
-    --text-4: 1.5rem;
-    --text-5: 1rem;
-    --text-6: 1.2rem;
-    --text-nav: 1.3rem;
-    --text-tag: 0.85rem;
-}
-
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
+    -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
 }
 
 body {
-    font-family: var(--font-body);
+    background-color: var(--color-bg);
     color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--size-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-p,
-span,
-li {
-    color: var(--color-text);
+img,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
-a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: all 300ms ease;
+img {
+    height: auto;
 }
 
-a:hover {
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
-    text-decoration-color: rgb(181, 181, 181);
-}
-
-ul {
+ul,
+ol {
     list-style: none;
 }
 
-/* Text sizes, from the largest heading down to body copy. */
-.text-1 {
-    font-size: var(--text-1);
+button,
+select,
+input {
+    font: inherit;
+    color: inherit;
 }
 
-.text-2 {
-    font-size: var(--text-2);
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.text-3 {
-    font-size: var(--text-3);
+a {
+    color: inherit;
+    text-decoration: none;
+    /* The underline is drawn as a background rather than with text-decoration,
+       so it also runs under any icon inside the link. */
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 1px;
+    transition: background-size var(--duration) var(--ease);
 }
 
-.text-4 {
-    font-size: var(--text-4);
-    font-weight: 900;
+a:hover {
+    background-size: 100% 1px;
 }
 
-.text-5 {
-    font-size: var(--text-5);
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.15;
+    font-weight: var(--weight-bold);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
 }
 
-.text-6 {
-    font-size: var(--text-6);
+h1 {
+    font-size: var(--size-display);
+    letter-spacing: -0.035em;
 }
 
-.noscript-note {
-    padding: 8rem 2rem 2rem;
-    text-align: center;
+h2 {
+    font-size: var(--size-h2);
+}
+
+h3 {
+    font-size: var(--size-h3);
+    letter-spacing: -0.01em;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.lead {
+    font-size: var(--size-lead);
+    color: var(--color-muted);
+    max-width: var(--width-text);
+}
+
+.muted {
+    color: var(--color-muted);
+}
+
+.faint {
+    color: var(--color-faint);
+}
+
+.small {
+    font-size: var(--size-small);
+}
+
+/* Short upper-case labels, e.g. section eyebrows and course codes. */
+.mono {
+    font-family: var(--font-mono);
+    font-size: var(--size-tiny);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Keyboard users get a clear focus ring; mouse users do not. */
+:focus-visible {
+    outline: var(--ring);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+.skip-link {
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    translate: -50% -150%;
+    z-index: 200;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-pill);
+    padding: 0.6rem 1.2rem;
+    transition: translate var(--duration) var(--ease);
+}
+
+.skip-link:focus-visible {
+    translate: -50% 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Page shell */
+.container {
+    width: 100%;
+    max-width: var(--width-content);
+    margin-inline: auto;
+    padding-inline: var(--space-page);
+}
+
+main > section {
+    padding-block: var(--space-section);
+    scroll-margin-top: var(--header-height);
+}
+
+main > section + section {
+    border-top: 1px solid var(--color-border);
+}
+
+/* Section headings */
+.section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-accent-text);
+}
+
+.section-eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-border);
+}
+
+/* Reveal on scroll. Without JavaScript, or with reduced motion, everything is
+   visible from the start. */
+@media (prefers-reduced-motion: no-preference) {
+    .js .reveal {
+        opacity: 0;
+        translate: 0 1.25rem;
+        transition:
+            opacity 700ms var(--ease),
+            translate 700ms var(--ease);
+    }
+
+    .js .reveal.is-visible {
+        opacity: 1;
+        translate: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

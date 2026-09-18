@@ -1,0 +1,115 @@
+/* Design tokens. Change a value here and it applies across the whole site. */
+
+:root {
+    /* System fonts, so there is nothing to download. The CJK families keep
+       Chinese and Japanese looking right on every platform. */
+    --font-sans:
+        ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+        "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Microsoft JhengHei", "PingFang TC", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    /* Fluid type: the middle value scales with the viewport. */
+    --size-display: clamp(2.75rem, 1.6rem + 5vw, 5rem);
+    --size-h2: clamp(1.9rem, 1.3rem + 2.4vw, 3rem);
+    --size-h3: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
+    --size-lead: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
+    --size-body: 1rem;
+    --size-small: 0.875rem;
+    --size-tiny: 0.78rem;
+
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-bold: 650;
+
+    /* Spacing */
+    --space-page: clamp(1.25rem, 4vw, 2.5rem);
+    --space-section: clamp(4.5rem, 9vw, 8rem);
+    --space-card: clamp(1.25rem, 2.5vw, 1.75rem);
+    --width-content: 1180px;
+    --width-text: 62ch;
+
+    --radius-sm: 8px;
+    --radius: 14px;
+    --radius-lg: 22px;
+    --radius-pill: 999px;
+
+    --header-height: 4rem;
+    --ring: 2px solid var(--color-accent);
+
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --duration: 260ms;
+}
+
+/* Light theme, and the default when no preference is stored. */
+:root,
+:root[data-theme="light"] {
+    --color-bg: #fbfbf9;
+    --color-bg-soft: #f3f2ee;
+    --color-surface: #ffffff;
+    --color-text: #16161a;
+    --color-muted: #6a6a72;
+    --color-faint: #73737b;
+    --color-border: rgb(20 20 26 / 0.1);
+    --color-border-strong: rgb(20 20 26 / 0.18);
+
+    --color-accent: #b4451c;
+    --color-accent-text: #96380f;
+    --color-accent-soft: rgb(180 69 28 / 0.09);
+    --color-on-accent: #ffffff;
+
+    --shadow-sm: 0 1px 2px rgb(20 20 26 / 0.05);
+    --shadow: 0 6px 24px -12px rgb(20 20 26 / 0.18);
+    --shadow-lg: 0 20px 50px -24px rgb(20 20 26 / 0.3);
+
+    --header-bg: rgb(251 251 249 / 0.72);
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --color-bg: #0c0c0e;
+    --color-bg-soft: #141417;
+    --color-surface: #16161a;
+    --color-text: #ecebe8;
+    --color-muted: #9d9da6;
+    --color-faint: #808089;
+    --color-border: rgb(255 255 255 / 0.1);
+    --color-border-strong: rgb(255 255 255 / 0.2);
+
+    --color-accent: #ff8b53;
+    --color-accent-text: #ff9c6b;
+    --color-accent-soft: rgb(255 139 83 / 0.13);
+    --color-on-accent: #1a0d05;
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow: 0 6px 24px -12px rgb(0 0 0 / 0.7);
+    --shadow-lg: 0 20px 50px -24px rgb(0 0 0 / 0.9);
+
+    --header-bg: rgb(12 12 14 / 0.72);
+    color-scheme: dark;
+}
+
+/* Visitors who have not chosen a theme follow their system setting. */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --color-bg: #0c0c0e;
+        --color-bg-soft: #141417;
+        --color-surface: #16161a;
+        --color-text: #ecebe8;
+        --color-muted: #9d9da6;
+        --color-faint: #808089;
+        --color-border: rgb(255 255 255 / 0.1);
+        --color-border-strong: rgb(255 255 255 / 0.2);
+
+        --color-accent: #ff8b53;
+        --color-accent-text: #ff9c6b;
+        --color-accent-soft: rgb(255 139 83 / 0.13);
+        --color-on-accent: #1a0d05;
+
+        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+        --shadow: 0 6px 24px -12px rgb(0 0 0 / 0.7);
+        --shadow-lg: 0 20px 50px -24px rgb(0 0 0 / 0.9);
+
+        --header-bg: rgb(12 12 14 / 0.72);
+        color-scheme: dark;
+    }
+}

@@ -1,74 +1,85 @@
-// Runs the hamburger menu and highlights the link of the section being viewed.
+// Header behaviour: the mobile menu, the border that appears on scroll, and
+// highlighting the link of the section currently being read.
 
 export class Navigation {
     constructor() {
-        this.icon = document.querySelector(".hamburger-icon");
-        this.menu = document.querySelector(".menu-links");
-        this.links = document.querySelectorAll(".nav-links .nav-link, .menu-links .nav-link");
-        this.sections = [...document.querySelectorAll("section")];
+        this.header = document.querySelector(".site-header");
+        this.menu = document.getElementById("mobile-menu");
+        this.menuButton = document.querySelector(".menu-button");
+        this.sections = [...document.querySelectorAll("main > section")];
+        this.links = [];
         this.activeSection = "";
         this.updateQueued = false;
 
+        this.refresh();
         this.listen();
-        this.updateActiveLink();
+        this.update();
+    }
+
+    /** Re-reads the links, for use after the navigation bars are rebuilt. */
+    refresh() {
+        this.links = [...document.querySelectorAll("[data-section]")];
+        this.links.forEach(link => link.addEventListener("click", () => this.closeMenu()));
     }
 
     listen() {
-        this.icon.addEventListener("click", () => this.toggleMenu());
-        this.icon.addEventListener("keydown", event => {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                this.toggleMenu();
-            }
+        this.menuButton?.addEventListener("click", () => this.toggleMenu());
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") this.closeMenu();
         });
 
-        // Any tap outside the open menu closes it.
-        document.addEventListener("click", event => {
-            if (!event.target.closest(".hamburger-menu")) this.closeMenu();
-        });
-        document
-            .querySelectorAll(".nav-link")
-            .forEach(element => element.addEventListener("click", () => this.closeMenu()));
-
-        const queueUpdate = () => {
+        const queue = () => {
             if (this.updateQueued) return;
             this.updateQueued = true;
             requestAnimationFrame(() => {
                 this.updateQueued = false;
-                this.updateActiveLink();
+                this.update();
             });
         };
-        window.addEventListener("scroll", queueUpdate, { passive: true });
-        window.addEventListener("resize", queueUpdate);
+        window.addEventListener("scroll", queue, { passive: true });
+        window.addEventListener("resize", queue);
     }
 
     openMenu() {
-        this.icon.classList.add("open");
-        this.menu.classList.add("open");
+        this.menu?.classList.add("is-open");
+        this.menuButton?.setAttribute("aria-expanded", "true");
+        document.body.classList.add("menu-open");
     }
 
     closeMenu() {
-        this.icon.classList.remove("open");
-        this.menu.classList.remove("open");
+        this.menu?.classList.remove("is-open");
+        this.menuButton?.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
     }
 
     toggleMenu() {
-        if (this.menu.classList.contains("open")) this.closeMenu();
+        if (this.menu?.classList.contains("is-open")) this.closeMenu();
         else this.openMenu();
     }
 
-    /** The active section is the last one that has started before a third of the way down the screen. */
-    updateActiveLink() {
-        const line = window.scrollY + window.innerHeight / 3;
-        let active = this.sections[0];
-        for (const section of this.sections) {
-            if (section.offsetTop <= line) active = section;
-        }
-        if (!active || active.id === this.activeSection) return;
+    update() {
+        this.header?.classList.toggle("is-stuck", window.scrollY > 8);
 
-        this.activeSection = active.id;
-        this.links.forEach(element => {
-            element.classList.toggle("active", element.dataset.section === this.activeSection);
-        });
+        // The section being read is the last one that starts above a third of the screen.
+        const line = window.scrollY + window.innerHeight / 3;
+        let active = "";
+        for (const section of this.sections) {
+            if (section.offsetTop <= line) active = section.id;
+        }
+
+        // The last section can be shorter than the screen, so its top never reaches
+        // the line. Once the page cannot scroll further, it is the one being read.
+        const bottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+        if (bottom && this.sections.length) active = this.sections[this.sections.length - 1].id;
+        if (active === this.activeSection) return;
+
+        this.activeSection = active;
+        for (const link of this.links) {
+            const isActive = link.dataset.section === active;
+            link.classList.toggle("is-active", isActive);
+            if (isActive) link.setAttribute("aria-current", "true");
+            else link.removeAttribute("aria-current");
+        }
     }
 }

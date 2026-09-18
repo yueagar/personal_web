@@ -3,26 +3,20 @@
         "title": "YueAgar_c的網站",
         "htmlLang": "zh-Hant"
     },
-
     "nav": {
         "logo": "YueAgar_c",
-        "profile": "簡介",
         "about": "關於我",
         "experience": "工作經驗",
         "coursework": "已修課業",
         "projects": "專案",
         "skills": "技能",
         "contact": "聯絡",
-        "menuWidth": "160px"
+        "skip": "跳至內容",
+        "menu": "選單",
+        "close": "關閉選單",
+        "theme": "切換主題",
+        "language": "語言"
     },
-
-    "profile": {
-        "greeting": "控制台：你好世界。",
-        "name": "我是YueAgar_c。",
-        "study": "{school} {programme} {year}。",
-        "resumeButton": "查看我的履歷"
-    },
-
     "about": {
         "eyebrow": "了解更多",
         "heading": "關於我！",
@@ -32,44 +26,44 @@
         "minor": "日本語言副修",
         "majorGpa": "主修GPA：{gpa}",
         "achievementsTitle": "成就與獎項",
-        "intro": "你好世界。我是YueAgar_c (現實中我的名字是Yue Ka Leung Kelvin)。我是一名{age}歲的計算機科學學生，擁有接近兩年的軟件工程經驗，並朝着成為專業軟件工程師的目標進發。"
+        "intro": "你好世界。我是YueAgar_c (現實中我的名字是Yue Ka Leung Kelvin)。我是一名{age}歲的計算機科學學生，擁有接近兩年的軟件工程經驗，並朝着成為專業軟件工程師的目標進發。",
+        "portraitAlt": "余嘉樑攝於東京上野動物園"
     },
-
     "experience": {
         "eyebrow": "我工作過的地方",
         "heading": "工作經驗",
         "current": "至今"
     },
-
     "coursework": {
         "eyebrow": "我修讀了這些",
         "heading": "課程",
-        "sourceCode": "課業源碼"
+        "sourceCode": "課業源碼",
+        "all": "全部",
+        "count": "{count}個課程",
+        "term": "第{n}學期",
+        "summer": "暑期"
     },
-
     "projects": {
         "eyebrow": "探索我的",
         "heading": "專案",
-        "sourceCode": "源碼"
+        "sourceCode": "源碼",
+        "visit": "前往"
     },
-
     "skills": {
         "eyebrow": "我使用的",
         "heading": "技能"
     },
-
     "contact": {
         "eyebrow": "感興趣嗎？",
-        "heading": "聯絡我！"
+        "heading": "聯絡我！",
+        "intro": "無論是實習、畢業生職位，還是任何值得一做的項目，我都樂意聽聽。電郵是最快找到我的方法。",
+        "emailButton": "寄電郵給我"
     },
-
     "items": {
         "linkedin": "我的LinkedIn檔案",
         "github": "我的GitHub檔案",
-
         "award-cse-outstanding": "計算機科學與工程學系優秀學業表現銅獎 (首5%)，2025-26",
         "award-deans-list": "院長嘉許名單，2023-24 / 2024-25 / 2025-26",
-
         "job-10x-groupchat": {
             "title": "軟件工程實習生",
             "organization": "10X Groupchat, LLC",
@@ -92,11 +86,9 @@
                 "設計及實作Pivotal-AI服務的功能權限控制與自動發送電郵的API。"
             ]
         },
-
         "group-computer-science": "計算機科學",
         "group-mathematics": "數學",
         "group-japanese": "日本語言 (副修)",
-
         "CS50x": "計算機科學導論",
         "CSCI3100": "軟件工程",
         "CSCI3170": "資料庫系統導論",
@@ -123,11 +115,6 @@
         "JASP2450": "新編實用日語III",
         "JASP1460": "新編實用日語II",
         "JASP1450": "新編實用日語I",
-
-        "project-booking": {
-            "title": "中大場地及器材預約SaaS",
-            "description": "帶領五人團隊進行全端開發，並取得滿分。制定程式碼審查標準、消除N+1資料庫查詢，並實作角色權限控制。"
-        },
         "project-hslo": {
             "title": "Agar.io HSLO",
             "description": "自製的客戶端及伺服器，吸引超過1000名玩家。使用二進位WebSocket協定，並以四元樹每40毫秒處理超過10000個實體。由於其他參與者不同意分享源碼，因此不提供源碼連結。"
@@ -136,21 +123,35 @@
             "title": "Dot Minigame",
             "description": "靈感來自agar.io。"
         },
-
         "skills-languages": "程式語言",
         "skills-frameworks": "框架",
         "skills-libraries": "函式庫",
         "skills-tools": "開發工具",
         "skills-spoken": "語言能力",
-
         "spoken-cantonese": "廣東話 (母語)",
         "spoken-mandarin": "普通話 (流利)",
         "spoken-english": "英語 (流利)",
         "spoken-japanese": "日語 (中等)",
-
         "contact-email": "電郵",
         "contact-school-email": "學校電郵",
         "contact-linkedin": "LinkedIn",
-        "contact-discord": "Discord"
+        "contact-discord": "Discord",
+        "stat-gpa": "主修GPA",
+        "stat-deans": "院長嘉許名單",
+        "stat-experience": "年軟件工程經驗",
+        "stat-players": "Agar.io HSLO玩家"
+    },
+    "hero": {
+        "eyebrow": "控制台：你好世界。",
+        "name": "余嘉樑",
+        "handle": "YueAgar_c",
+        "role": "{school} {programme}，{year}年畢業",
+        "intro": "全端開發者，擁有接近兩年開發網頁及流動應用功能的經驗，現正專注於AI應用工程。",
+        "resume": "查看我的履歷",
+        "contact": "與我聯絡",
+        "scroll": "向下閱讀"
+    },
+    "footer": {
+        "builtWith": "以HTML、CSS及JavaScript打造。"
     }
 }

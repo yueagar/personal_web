@@ -3,26 +3,20 @@
         "title": "YueAgar_c's website",
         "htmlLang": "en"
     },
-
     "nav": {
         "logo": "YueAgar_c",
-        "profile": "Profile",
         "about": "About",
         "experience": "Experience",
         "coursework": "Coursework",
         "projects": "Projects",
         "skills": "Skills",
         "contact": "Contact",
-        "menuWidth": "auto"
+        "skip": "Skip to content",
+        "menu": "Menu",
+        "close": "Close menu",
+        "theme": "Switch theme",
+        "language": "Language"
     },
-
-    "profile": {
-        "greeting": "Console says: Hello World.",
-        "name": "I'm YueAgar_c.",
-        "study": "{year} {programme} @ {school}.",
-        "resumeButton": "View my resume"
-    },
-
     "about": {
         "eyebrow": "Know more",
         "heading": "About Me!",
@@ -32,44 +26,44 @@
         "minor": "Minor in Japanese Language",
         "majorGpa": "Major GPA: {gpa}",
         "achievementsTitle": "Achievements and Awards",
-        "intro": "Hello World. I am YueAgar_c (or Yue Ka Leung Kelvin in real life). I am a {age} years old computer science student with nearly two years of software engineering experience, and I look forward to becoming a professional software engineer."
+        "intro": "Hello World. I am YueAgar_c (or Yue Ka Leung Kelvin in real life). I am a {age} years old computer science student with nearly two years of software engineering experience, and I look forward to becoming a professional software engineer.",
+        "portraitAlt": "Kelvin Yue at Ueno Zoo in Tokyo"
     },
-
     "experience": {
         "eyebrow": "Where I worked",
         "heading": "Experience",
         "current": "present"
     },
-
     "coursework": {
         "eyebrow": "I took these",
         "heading": "Courses",
-        "sourceCode": "Coursework source code"
+        "sourceCode": "Coursework source code",
+        "all": "All",
+        "count": "{count} courses",
+        "term": "Term {n}",
+        "summer": "Summer"
     },
-
     "projects": {
         "eyebrow": "Explore my",
         "heading": "Projects",
-        "sourceCode": "Source code"
+        "sourceCode": "Source code",
+        "visit": "Visit"
     },
-
     "skills": {
         "eyebrow": "What I use",
         "heading": "Skills"
     },
-
     "contact": {
         "eyebrow": "Interested?",
-        "heading": "Contact Me!"
+        "heading": "Contact Me!",
+        "intro": "I am always glad to hear about internships, graduate roles or anything worth building. The quickest way to reach me is email.",
+        "emailButton": "Email me"
     },
-
     "items": {
         "linkedin": "My LinkedIn profile",
         "github": "My GitHub profile",
-
         "award-cse-outstanding": "CSE Outstanding Academic Performance — Bronze Award (top 5%), 2025-26",
         "award-deans-list": "Dean's List, 2023-24 / 2024-25 / 2025-26",
-
         "job-10x-groupchat": {
             "title": "Software Engineer Intern",
             "organization": "10X Groupchat, LLC",
@@ -92,11 +86,9 @@
                 "Designed and implemented the API for feature access control and automatic email sending in Pivotal-AI services."
             ]
         },
-
         "group-computer-science": "Computer Science",
         "group-mathematics": "Mathematics",
         "group-japanese": "Japanese (Minor)",
-
         "CS50x": "Introduction to Computer Science",
         "CSCI3100": "Software Engineering",
         "CSCI3170": "Introduction to Database Systems",
@@ -123,11 +115,6 @@
         "JASP2450": "New Practical Japanese III",
         "JASP1460": "New Practical Japanese II",
         "JASP1450": "New Practical Japanese I",
-
-        "project-booking": {
-            "title": "CUHK Venue & Equipment Booking SaaS",
-            "description": "Led full-stack development with a team of 5 and scored full marks. Set up code review standards, removed N+1 database queries and implemented role-based access control."
-        },
         "project-hslo": {
             "title": "Agar.io HSLO",
             "description": "A custom client and server that drew more than 1000 players. Uses a binary WebSocket protocol and a quadtree to process over 10000 entities every 40 milliseconds. Source code is not available because the others who worked on it did not agree to share it."
@@ -136,21 +123,35 @@
             "title": "Dot Minigame",
             "description": "Inspired by agar.io."
         },
-
         "skills-languages": "Programming Languages",
         "skills-frameworks": "Frameworks",
         "skills-libraries": "Libraries",
         "skills-tools": "Developer Tools",
         "skills-spoken": "Spoken Languages",
-
         "spoken-cantonese": "Cantonese (native)",
         "spoken-mandarin": "Mandarin (fluent)",
         "spoken-english": "English (fluent)",
         "spoken-japanese": "Japanese (intermediate)",
-
         "contact-email": "Email",
         "contact-school-email": "School email",
         "contact-linkedin": "LinkedIn",
-        "contact-discord": "Discord"
+        "contact-discord": "Discord",
+        "stat-gpa": "Major GPA",
+        "stat-deans": "Dean's List",
+        "stat-experience": "Years in software engineering",
+        "stat-players": "Players on Agar.io HSLO"
+    },
+    "hero": {
+        "eyebrow": "Console says: Hello World.",
+        "name": "Kelvin Yue",
+        "handle": "YueAgar_c",
+        "role": "{programme} at {school}, class of {year}",
+        "intro": "Full-stack developer with nearly two years of experience shipping web and mobile features, now focused on AI application engineering.",
+        "resume": "View my resume",
+        "contact": "Get in touch",
+        "scroll": "Scroll to read more"
+    },
+    "footer": {
+        "builtWith": "Built with HTML, CSS and JavaScript."
     }
 }

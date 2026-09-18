@@ -1,149 +1,263 @@
 {
     "comment": "Language-independent content. Every item has an id; its wording lives in data/text.<lang>.json under \"items\".",
-
     "birthDate": "2004-08-07",
-
     "profile": {
-        "picture": "assets/profile-pic.png",
+        "picture": "assets/profile-pic.webp",
         "resume": "assets/resume.pdf",
         "study": {
             "programme": "CSCI",
             "programmeUrl": "https://www.cse.cuhk.edu.hk/admission/cscin/",
             "school": "CUHK",
             "schoolUrl": "https://www.cuhk.edu.hk/",
-            "graduationYear": "'27"
+            "graduationYear": "2027"
         },
         "socials": [
             {
                 "id": "linkedin",
                 "url": "https://www.linkedin.com/in/klyue",
-                "icon": "assets/linkedin.png"
+                "icon": "linkedin"
             },
             {
                 "id": "github",
                 "url": "https://github.com/yueagar",
-                "icon": "assets/github.png"
+                "icon": "github"
             }
         ]
     },
-
     "about": {
-        "picture": "assets/about-pic.png",
+        "picture": "assets/about-pic.webp",
         "education": {
-            "icon": "assets/education.png",
+            "icon": "cap",
             "schoolUrl": "https://www.cuhk.edu.hk/",
             "programmeUrl": "https://www.cse.cuhk.edu.hk/admission/cscin/",
             "years": "2023 - 2027",
             "majorGpa": "3.916 / 4.000"
         },
         "achievements": {
-            "icon": "assets/achievement.png",
+            "icon": "trophy",
             "items": ["award-cse-outstanding", "award-deans-list"]
         }
     },
-
     "experience": [
         {
             "id": "job-10x-groupchat",
-            "url": "https://www.tribechat.pro/about",
+            "url": "https://www.tribechat.pro",
             "period": "2024.11 - {current}",
             "stack": ["React Native", "Ruby on Rails", "PostgreSQL"]
         },
         {
             "id": "job-nextgen",
-            "url": "https://play.google.com/store/apps/details?id=com.remarkablesports&hl=en",
+            "url": "https://nextgen-solns.com",
             "period": "2025.05 - 2025.08",
             "stack": ["ReactJS", "React Native", "Python", "ASP.NET", "MySQL"]
         }
     ],
-
     "coursework": [
         {
             "id": "group-computer-science",
             "courses": [
-                { "id": "CSCI3100", "year": 2026, "grade": "A" },
-                { "id": "CSCI3170", "year": 2026, "grade": "A" },
-                { "id": "ESTR3108", "year": 2026, "grade": "A", "url": null },
-                { "id": "CSCI3160", "year": 2026, "grade": "A" },
-                { "id": "CSCI3150", "year": 2026, "grade": "A" },
-                { "id": "CSCI3130", "year": 2026, "grade": "A" },
-                { "id": "ESTR3106", "year": 2026, "grade": "A-", "url": null },
-                { "id": "CSCI2100", "year": 2025, "grade": "A-" },
-                { "id": "CENG3420", "year": 2025, "grade": "A-" },
-                { "id": "CSCI1130", "year": 2024, "grade": "A" },
-                { "id": "ENGG2020", "year": 2024, "grade": "A" },
-                { "id": "ENGG1110", "year": 2023, "grade": "A" },
+                {
+                    "id": "CSCI3100",
+                    "grade": "A",
+                    "academicYear": "2025-26",
+                    "term": 2
+                },
+                {
+                    "id": "CSCI3170",
+                    "grade": "A",
+                    "academicYear": "2025-26",
+                    "term": 2
+                },
+                {
+                    "id": "ESTR3106",
+                    "grade": "A-",
+                    "linkCode": "CSCI3180",
+                    "academicYear": "2025-26",
+                    "term": 2
+                },
+                {
+                    "id": "CSCI3130",
+                    "grade": "A",
+                    "academicYear": "2025-26",
+                    "term": 1
+                },
+                {
+                    "id": "CSCI3150",
+                    "grade": "A",
+                    "academicYear": "2025-26",
+                    "term": 1
+                },
+                {
+                    "id": "CSCI3160",
+                    "grade": "A",
+                    "academicYear": "2025-26",
+                    "term": 1
+                },
+                {
+                    "id": "ESTR3108",
+                    "grade": "A",
+                    "linkCode": "CSCI3230",
+                    "academicYear": "2025-26",
+                    "term": 1
+                },
+                {
+                    "id": "CENG3420",
+                    "grade": "A-",
+                    "academicYear": "2024-25",
+                    "term": 2
+                },
+                {
+                    "id": "CSCI2100",
+                    "grade": "A-",
+                    "academicYear": "2024-25",
+                    "term": 2
+                },
+                {
+                    "id": "CSCI1130",
+                    "grade": "A",
+                    "academicYear": "2024-25",
+                    "term": 1
+                },
+                {
+                    "id": "ENGG2020",
+                    "grade": "A",
+                    "academicYear": "2023-24",
+                    "term": 2
+                },
                 {
                     "id": "ENGG1003",
-                    "year": 2023,
                     "grade": "DI",
-                    "url": "https://dlct.cse.cuhk.edu.hk/1003registration.php"
+                    "url": "https://dlct.cse.cuhk.edu.hk/1003registration.php",
+                    "academicYear": "2023-24",
+                    "term": 1
+                },
+                {
+                    "id": "ENGG1110",
+                    "grade": "A",
+                    "academicYear": "2023-24",
+                    "term": 1
                 },
                 {
                     "id": "CS50x",
-                    "year": 2023,
                     "grade": "100%",
                     "school": "Harvard",
                     "url": "https://cs50.harvard.edu/x/2023/",
-                    "sourceUrl": "https://github.com/yueagar/my_cs50_code"
+                    "sourceUrl": "https://github.com/yueagar/my_cs50_code",
+                    "academicYear": "2023"
                 }
             ]
         },
         {
             "id": "group-mathematics",
             "courses": [
-                { "id": "ENGG2440", "year": 2024, "grade": "A-" },
-                { "id": "ESTR2020", "year": 2025, "grade": "A-", "url": null },
-                { "id": "ESTR2018", "year": 2024, "grade": "B+", "url": null },
-                { "id": "ENGG1120", "year": 2024, "grade": "A-" },
-                { "id": "ENGG1130", "year": 2024, "grade": "A-" },
+                {
+                    "id": "ESTR2020",
+                    "grade": "A-",
+                    "linkCode": "ENGG2780",
+                    "academicYear": "2024-25",
+                    "term": 2
+                },
+                {
+                    "id": "ENGG2440",
+                    "grade": "A-",
+                    "academicYear": "2024-25",
+                    "term": 1
+                },
+                {
+                    "id": "ESTR2018",
+                    "grade": "B+",
+                    "linkCode": "ENGG2760",
+                    "academicYear": "2024-25",
+                    "term": 1
+                },
+                {
+                    "id": "ENGG1120",
+                    "grade": "A-",
+                    "academicYear": "2023-24",
+                    "term": 2
+                },
+                {
+                    "id": "ENGG1130",
+                    "grade": "A-",
+                    "academicYear": "2023-24",
+                    "term": 2
+                },
                 {
                     "id": "MATH1510",
-                    "year": 2023,
                     "grade": "A-",
-                    "url": "https://www.math.cuhk.edu.hk/course/math1510"
+                    "url": "https://www.math.cuhk.edu.hk/course/math1510",
+                    "academicYear": "2023-24",
+                    "term": 1
                 }
             ]
         },
         {
             "id": "group-japanese",
             "courses": [
-                { "id": "JASP3330", "year": 2026, "grade": "A-", "url": null },
-                { "id": "JASP3200", "year": 2026, "grade": "B+", "url": null },
-                { "id": "JASP2460", "year": 2025, "grade": "A-", "url": null },
-                { "id": "JASP2450", "year": 2024, "grade": "B+", "url": null },
-                { "id": "JASP1460", "year": 2024, "grade": "A-", "url": null },
-                { "id": "JASP1450", "year": 2023, "grade": "A-", "url": null }
+                {
+                    "id": "JASP3200",
+                    "grade": "B+",
+                    "url": null,
+                    "academicYear": "2025-26",
+                    "term": 2
+                },
+                {
+                    "id": "JASP3330",
+                    "grade": "A-",
+                    "url": null,
+                    "academicYear": "2025-26",
+                    "term": 1
+                },
+                {
+                    "id": "JASP2460",
+                    "grade": "A-",
+                    "url": null,
+                    "academicYear": "2024-25",
+                    "term": 2
+                },
+                {
+                    "id": "JASP2450",
+                    "grade": "B+",
+                    "url": null,
+                    "academicYear": "2024-25",
+                    "term": 1
+                },
+                {
+                    "id": "JASP1460",
+                    "grade": "A-",
+                    "url": null,
+                    "academicYear": "2023-24",
+                    "term": 2
+                },
+                {
+                    "id": "JASP1450",
+                    "grade": "A-",
+                    "url": null,
+                    "academicYear": "2023-24",
+                    "term": 1
+                }
             ]
         }
     ],
-
     "courseUrlPattern": "https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/{code}.pdf",
     "defaultSchool": "CUHK",
-
     "projects": [
-        {
-            "id": "project-booking",
-            "period": "2026",
-            "stack": ["ReactJS", "Ruby on Rails", "PostgreSQL"]
-        },
         {
             "id": "project-hslo",
             "url": "../hslo",
-            "image": "assets/project-1.png",
+            "image": "assets/project-1.webp",
             "period": "2019 - 2022",
             "stack": ["PixiJS", "Node.js", "Google Cloud Platform"]
         },
         {
             "id": "project-minigame",
             "url": "../minigame",
-            "image": "assets/project-2.png",
+            "image": "assets/project-2.webp",
             "sourceUrl": "https://github.com/yueagar/minigame",
             "period": "2020",
             "stack": ["JavaScript", "HTML Canvas"]
         }
     ],
-
     "skills": [
         {
             "id": "skills-languages",
@@ -175,32 +289,50 @@
             "translateItems": true
         }
     ],
-
     "contacts": [
         {
             "id": "contact-email",
-            "icon": "assets/email.png",
+            "icon": "mail",
             "value": "kelvin20040807@gmail.com",
             "url": "mailto:kelvin20040807@gmail.com"
         },
         {
             "id": "contact-school-email",
-            "icon": "assets/email.png",
+            "icon": "mail",
             "value": "klyue@link.cuhk.edu.hk",
             "url": "mailto:klyue@link.cuhk.edu.hk"
         },
         {
             "id": "contact-linkedin",
-            "icon": "assets/linkedin.png",
+            "icon": "linkedin",
             "value": "linkedin.com/in/klyue",
             "url": "https://www.linkedin.com/in/klyue"
         },
         {
             "id": "contact-discord",
-            "icon": "assets/discord.png",
+            "icon": "discord",
             "value": "yueagar_c"
         }
     ],
-
-    "footerYear": 2026
+    "footerYear": 2026,
+    "sections": ["about", "experience", "coursework", "projects", "skills", "contact"],
+    "topGrades": ["A", "A+", "DI", "100%"],
+    "stats": [
+        {
+            "id": "stat-gpa",
+            "value": "3.916"
+        },
+        {
+            "id": "stat-deans",
+            "value": "3×"
+        },
+        {
+            "id": "stat-experience",
+            "value": "~2"
+        },
+        {
+            "id": "stat-players",
+            "value": "1000+"
+        }
+    ]
 }

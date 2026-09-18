@@ -1,133 +1,303 @@
-/* Pictures */
-.avatar {
-    border-radius: 100%;
-    width: var(--size-avatar);
-    height: var(--size-avatar);
-    object-fit: cover;
+/* Reusable pieces: header, buttons, cards, chips and icons. */
+
+/* ---------- Header ---------- */
+.site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    height: var(--header-height);
+    background-color: var(--header-bg);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--duration) var(--ease);
 }
 
-.profile-picture,
-.about-picture {
+/* The border only appears once the page has been scrolled. */
+.site-header.is-stuck {
+    border-bottom-color: var(--color-border);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
+}
+
+.brand {
+    font-weight: var(--weight-bold);
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.brand::before {
+    content: "";
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent);
     flex-shrink: 0;
 }
 
-/* Buttons */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.header-nav a {
+    position: relative;
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--size-small);
+    color: var(--color-muted);
+    transition:
+        color var(--duration) var(--ease),
+        background-color var(--duration) var(--ease);
+}
+
+.header-nav a:hover {
+    color: var(--color-text);
+    background-color: var(--color-bg-soft);
+}
+
+.header-nav a.is-active {
+    color: var(--color-text);
+    background-color: var(--color-accent-soft);
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ---------- Buttons ---------- */
 .button {
-    border: var(--color-border) 0.1rem solid;
-    border-radius: var(--radius-card);
-    padding: 1rem;
-    width: 10rem;
-    font-family: inherit;
-    font-weight: 600;
-    background-color: var(--color-surface);
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-pill);
+    padding: 0.7rem 1.25rem;
+    font-size: var(--size-small);
+    font-weight: var(--weight-medium);
+    border: 1px solid transparent;
+    transition:
+        background-color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease),
+        color var(--duration) var(--ease),
+        translate var(--duration) var(--ease);
 }
 
 .button:hover {
-    background-color: var(--color-border);
-    color: var(--color-surface);
+    translate: 0 -2px;
 }
 
-/* Icons */
-.social-icon {
-    border-radius: 100%;
-    height: var(--size-icon);
-    cursor: pointer;
-    transition: transform 400ms;
+.button-primary {
+    background-color: var(--color-text);
+    color: var(--color-bg);
 }
 
-.social-icon:hover {
-    transform: rotate(360deg);
+.button-primary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
 }
 
-.card-icon {
-    border-radius: 100%;
-    height: var(--size-icon);
+.button-ghost {
+    border-color: var(--color-border-strong);
+    color: var(--color-text);
 }
 
-.contact-icon {
-    width: 2.4rem;
-    height: 2.4rem;
-    padding-right: 0.4rem;
+.button-ghost:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent-text);
 }
 
-/* Cards */
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+/* Square icon-only buttons in the header. */
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--radius-pill);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-card);
-    padding: 1.5rem;
+    color: var(--color-muted);
+    transition:
+        color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease),
+        background-color var(--duration) var(--ease);
 }
 
-.card > .text-4 {
-    text-align: center;
+.icon-button:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+    background-color: var(--color-bg-soft);
 }
 
-/* Language selector */
+/* Only one of the two theme icons shows at a time. */
+.theme-toggle .icon-moon {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+        display: none;
+    }
+
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+        display: block;
+    }
+}
+
+/* ---------- Language picker ---------- */
+.language-picker {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-picker .icon {
+    position: absolute;
+    left: 0.6rem;
+    pointer-events: none;
+    color: var(--color-muted);
+}
+
 .language-select {
-    font-family: inherit;
-    font-size: var(--text-nav);
-    text-align: center;
-    width: 100%;
+    appearance: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-surface);
+    padding: 0.45rem 0.8rem 0.45rem 2rem;
+    font-size: var(--size-small);
+    color: var(--color-muted);
+    cursor: pointer;
+    transition:
+        color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease);
 }
 
-.nav-link.active {
-    background-color: var(--color-active);
+.language-select:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
 }
 
-/* Hamburger icon */
-.hamburger-icon {
+/* The open list is drawn by the browser and does not inherit, so set it here. */
+.language-select option {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+/* ---------- Mobile menu ---------- */
+.menu-button {
+    display: none;
+}
+
+/* The button shows the close icon only while the menu is open. */
+.menu-button .icon-close,
+.menu-button[aria-expanded="true"] .icon-menu {
+    display: none;
+}
+
+.menu-button[aria-expanded="true"] .icon-close {
+    display: block;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: var(--header-height) 0 0 0;
+    z-index: 90;
+    background-color: var(--color-bg);
+    padding: 1.5rem var(--space-page) 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-}
-
-.hamburger-icon span {
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-heading);
-    transition: all 300ms ease-in-out;
-}
-
-.hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
+    gap: 0.25rem;
+    overflow-y: auto;
+    visibility: hidden;
     opacity: 0;
+    translate: 0 -0.5rem;
+    transition:
+        opacity var(--duration) var(--ease),
+        translate var(--duration) var(--ease),
+        visibility var(--duration);
 }
 
-.hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
+.mobile-menu.is-open {
+    visibility: visible;
+    opacity: 1;
+    translate: none;
 }
 
-/* A title on the left and a date, grade or place on the right. */
-.row {
+.mobile-menu a {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-}
-
-/* Short and fixed, such as "2024.11 - present". */
-.meta {
-    flex-shrink: 0;
+    padding: 0.9rem 0.25rem;
+    font-size: 1.35rem;
+    font-weight: var(--weight-medium);
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid var(--color-border);
     color: var(--color-muted);
 }
 
-/* Long enough to need wrapping, such as a work location. */
-.place {
-    color: var(--color-muted);
-    text-align: right;
+.mobile-menu a.is-active {
+    color: var(--color-accent-text);
 }
 
-/* Tags */
+.mobile-menu a .mono {
+    color: var(--color-faint);
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-card);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Cards that respond to the pointer. */
+.card-hover {
+    transition:
+        border-color var(--duration) var(--ease),
+        box-shadow var(--duration) var(--ease),
+        translate var(--duration) var(--ease);
+}
+
+.card-hover:hover {
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow);
+    translate: 0 -3px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.card-title .icon {
+    color: var(--color-accent-text);
+}
+
+/* ---------- Chips and tags ---------- */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -136,67 +306,140 @@
 
 .tag {
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-tag);
-    background-color: var(--color-tag);
-    padding: 0.2rem 0.6rem;
-    font-size: var(--text-tag);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-soft);
+    padding: 0.2rem 0.55rem;
+    font-family: var(--font-mono);
+    font-size: var(--size-tiny);
+    color: var(--color-muted);
+    white-space: nowrap;
 }
 
-/* Experience */
-.points {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    list-style: disc;
-    padding-left: 1.2rem;
-}
-
-.points li {
-    display: list-item;
-}
-
-/* Coursework */
-.courses {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.course .row + .row {
-    margin-top: 0.1rem;
-}
-
-.grade {
-    color: var(--color-heading);
-}
-
-/* Projects */
-.project-image {
-    border-radius: var(--radius-card);
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 400ms ease;
-}
-
-.project-image img:hover {
-    transform: scale(1.05);
-}
-
-/* Contact */
-.contact-methods {
-    gap: 0.4rem;
-}
-
-.contact-method {
-    display: flex;
-    flex-direction: row;
+.pill {
+    display: inline-flex;
     align-items: center;
-    padding: 0.4rem;
+    gap: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-surface);
+    padding: 0.35rem 0.9rem;
+    font-size: var(--size-small);
+    color: var(--color-muted);
+    width: fit-content;
+}
+
+.pill::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* Grade badges in the coursework list. */
+.grade {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 1.6rem;
+    padding-inline: 0.45rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: var(--size-tiny);
+    font-weight: var(--weight-medium);
+    color: var(--color-muted);
+    flex-shrink: 0;
+}
+
+/* Top grades are picked out in the accent colour. */
+.grade-top {
+    background-color: var(--color-accent-soft);
+    border-color: transparent;
+    color: var(--color-accent-text);
+}
+
+/* Filter buttons above the coursework grid. */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    padding: 0.4rem 0.95rem;
+    font-size: var(--size-small);
+    color: var(--color-muted);
+    transition:
+        color var(--duration) var(--ease),
+        background-color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease);
+}
+
+.filter:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+}
+
+.filter[aria-pressed="true"] {
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+/* ---------- Links ---------- */
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-accent-text);
+    font-size: var(--size-small);
+    width: fit-content;
+}
+
+/* Links shaped like a button, card, pill or icon have their own hover, so they
+   do not take the underline. */
+.skip-link,
+.brand,
+.header-nav a,
+.mobile-menu a,
+.button,
+.icon-button,
+.icon-circle,
+.contact-row,
+.project-media a {
+    background-image: none;
+}
+
+/* ---------- Icons ---------- */
+.icon {
+    flex-shrink: 0;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-muted);
+    transition:
+        color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease),
+        translate var(--duration) var(--ease);
+}
+
+a.icon-circle:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+    translate: 0 -2px;
 }

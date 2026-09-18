@@ -3,26 +3,20 @@
         "title": "YueAgar_cのウェブサイト",
         "htmlLang": "ja"
     },
-
     "nav": {
         "logo": "YueAgar_c",
-        "profile": "プロフィール",
         "about": "私について",
         "experience": "職歴",
         "coursework": "授業と課題",
         "projects": "プロジェクト",
         "skills": "スキル",
         "contact": "連絡",
-        "menuWidth": "200px"
+        "skip": "本文へ移動",
+        "menu": "メニュー",
+        "close": "メニューを閉じる",
+        "theme": "テーマを切り替える",
+        "language": "言語"
     },
-
-    "profile": {
-        "greeting": "コンソール：こんにちは、世界。",
-        "name": "YueAgar_cと申します。",
-        "study": "{school} {programme} {year}。",
-        "resumeButton": "履歴書を閲覧する"
-    },
-
     "about": {
         "eyebrow": "私について",
         "heading": "もっと知りたいですか？",
@@ -32,44 +26,44 @@
         "minor": "日本語 副専攻",
         "majorGpa": "専攻GPA：{gpa}",
         "achievementsTitle": "受賞歴",
-        "intro": "こんにちは、世界。YueAgar_cです (現実の名前はYue Ka Leung Kelvinです)。{age}歳の情報工学の学生で、2年近くのソフトウェアエンジニアリング経験があり、プロのソフトウェアエンジニアになることを目指しています。"
+        "intro": "こんにちは、世界。YueAgar_cです (現実の名前はYue Ka Leung Kelvinです)。{age}歳の情報工学の学生で、2年近くのソフトウェアエンジニアリング経験があり、プロのソフトウェアエンジニアになることを目指しています。",
+        "portraitAlt": "東京の上野動物園にて"
     },
-
     "experience": {
         "eyebrow": "働いた場所",
         "heading": "職歴",
         "current": "現在"
     },
-
     "coursework": {
         "eyebrow": "受けた",
         "heading": "授業",
-        "sourceCode": "課題のソースコード"
+        "sourceCode": "課題のソースコード",
+        "all": "すべて",
+        "count": "{count}科目",
+        "term": "第{n}学期",
+        "summer": "夏期"
     },
-
     "projects": {
         "eyebrow": "私の",
         "heading": "プロジェクト",
-        "sourceCode": "ソースコード"
+        "sourceCode": "ソースコード",
+        "visit": "見る"
     },
-
     "skills": {
         "eyebrow": "使っている",
         "heading": "スキル"
     },
-
     "contact": {
         "eyebrow": "興味がありますか？",
-        "heading": "連絡してください！"
+        "heading": "連絡してください！",
+        "intro": "インターンシップ、新卒採用、あるいは作る価値のあるものについて、いつでもお話を伺います。メールが一番早く届きます。",
+        "emailButton": "メールを送る"
     },
-
     "items": {
         "linkedin": "私のLinkedInプロフィール",
         "github": "私のGitHubプロフィール",
-
         "award-cse-outstanding": "情報工学科 優秀学業成績 銅賞 (上位5%)、2025-26",
         "award-deans-list": "成績優秀者、2023-24 / 2024-25 / 2025-26",
-
         "job-10x-groupchat": {
             "title": "ソフトウェアエンジニア インターン",
             "organization": "10X Groupchat, LLC",
@@ -92,11 +86,9 @@
                 "Pivotal-AIサービスの機能アクセス制御と自動メール送信のAPIを設計・実装しました。"
             ]
         },
-
         "group-computer-science": "情報工学",
         "group-mathematics": "数学",
         "group-japanese": "日本語 (副専攻)",
-
         "CS50x": "情報工学概論",
         "CSCI3100": "ソフトウェア工学",
         "CSCI3170": "データベースシステム概論",
@@ -123,11 +115,6 @@
         "JASP2450": "新実用日本語III",
         "JASP1460": "新実用日本語II",
         "JASP1450": "新実用日本語I",
-
-        "project-booking": {
-            "title": "香港中文大学 施設・備品予約SaaS",
-            "description": "5人チームでフルスタック開発を主導し、満点を獲得しました。コードレビュー基準を整備し、N+1クエリを解消し、ロールベースのアクセス制御を実装しました。"
-        },
         "project-hslo": {
             "title": "Agar.io HSLO",
             "description": "自作のクライアントとサーバーで、1000人以上のプレイヤーを集めました。バイナリWebSocketプロトコルと四分木を使い、40ミリ秒ごとに10000以上のエンティティを処理します。他の参加者が公開に同意していないため、ソースコードは提供していません。"
@@ -136,21 +123,35 @@
             "title": "Dot Minigame",
             "description": "agar.ioからインスピレーションを受けました。"
         },
-
         "skills-languages": "プログラミング言語",
         "skills-frameworks": "フレームワーク",
         "skills-libraries": "ライブラリ",
         "skills-tools": "開発ツール",
         "skills-spoken": "話せる言語",
-
         "spoken-cantonese": "広東語 (母語)",
         "spoken-mandarin": "標準中国語 (流暢)",
         "spoken-english": "英語 (流暢)",
         "spoken-japanese": "日本語 (中級)",
-
         "contact-email": "メール",
         "contact-school-email": "大学のメール",
         "contact-linkedin": "LinkedIn",
-        "contact-discord": "Discord"
+        "contact-discord": "Discord",
+        "stat-gpa": "専攻GPA",
+        "stat-deans": "成績優秀者",
+        "stat-experience": "年のソフトウェア開発経験",
+        "stat-players": "Agar.io HSLOのプレイヤー"
+    },
+    "hero": {
+        "eyebrow": "コンソール：こんにちは、世界。",
+        "name": "ユー・カーレオン",
+        "handle": "YueAgar_c",
+        "role": "{school} {programme}、{year}年卒業予定",
+        "intro": "ウェブとモバイルの機能開発を2年近く手がけてきたフルスタック開発者です。現在はAIアプリケーション工学に注力しています。",
+        "resume": "履歴書を見る",
+        "contact": "連絡する",
+        "scroll": "下へスクロール"
+    },
+    "footer": {
+        "builtWith": "HTML・CSS・JavaScriptで構築しました。"
     }
 }

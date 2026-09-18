@@ -2,176 +2,171 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Personal website of Yue Ka Leung Kelvin, a computer science student at CUHK."
+            content="Kelvin Yue — computer science student at CUHK and software engineer intern."
         />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)" />
 
-        <title>YueAgar_c's website</title>
+        <title>YueAgar_c</title>
 
+        <link rel="preload" as="image" href="assets/profile-pic.webp" />
+        <link rel="stylesheet" href="css/tokens.css" />
         <link rel="stylesheet" href="css/base.css" />
-        <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/animations.css" />
-        <link rel="stylesheet" href="css/mediaqueries.css" />
+        <link rel="stylesheet" href="css/sections.css" />
 
+        <script>
+            // Runs before the first paint so the page never flashes the wrong theme.
+            (function () {
+                document.documentElement.classList.add("js");
+                try {
+                    var saved = localStorage.getItem("theme");
+                    if (saved === "light" || saved === "dark") {
+                        document.documentElement.dataset.theme = saved;
+                    }
+                } catch (error) {
+                    /* Private browsing blocks storage; the system theme is used instead. */
+                }
+            })();
+        </script>
         <script src="js/loader.js"></script>
     </head>
 
     <body>
-        <!-- Both navigation bars share the same links; only one is visible at a time. -->
-        <nav id="desktop-nav">
-            <div class="nav-logo">
-                <a href="#profile" class="nav-link" data-section="profile" data-text="nav.logo">YueAgar_c</a>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="#about" class="nav-link" data-section="about" data-text="nav.about">About</a>
-                </li>
-                <li>
-                    <a href="#experience" class="nav-link" data-section="experience" data-text="nav.experience"
-                        >Experience</a
-                    >
-                </li>
-                <li>
-                    <a href="#coursework" class="nav-link" data-section="coursework" data-text="nav.coursework"
-                        >Coursework</a
-                    >
-                </li>
-                <li>
-                    <a href="#projects" class="nav-link" data-section="projects" data-text="nav.projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#skills" class="nav-link" data-section="skills" data-text="nav.skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-link" data-section="contact" data-text="nav.contact">Contact</a>
-                </li>
-                <li><select class="language-select" aria-label="Language"></select></li>
-            </ul>
-        </nav>
+        <a class="skip-link" href="#main" data-text="nav.skip">Skip to content</a>
 
-        <nav id="hamburger-nav">
-            <div class="nav-logo">
-                <a href="#profile" class="nav-link" data-section="profile" data-text="nav.logo">YueAgar_c</a>
-            </div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" role="button" tabindex="0" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="#hero" data-text="nav.logo">YueAgar_c</a>
+
+                <nav class="header-nav" data-render="desktop-nav" aria-label="Sections"></nav>
+
+                <div class="header-tools">
+                    <div class="language-picker" data-render="language-picker-desktop"></div>
+                    <button class="icon-button theme-toggle" type="button" data-render="theme-toggle"></button>
+                    <button
+                        class="icon-button menu-button"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                        data-render="menu-button"
+                    ></button>
                 </div>
-                <ul class="menu-links">
-                    <li>
-                        <a href="#about" class="nav-link" data-section="about" data-text="nav.about">About</a>
-                    </li>
-                    <li>
-                        <a href="#experience" class="nav-link" data-section="experience" data-text="nav.experience"
-                            >Experience</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#coursework" class="nav-link" data-section="coursework" data-text="nav.coursework"
-                            >Coursework</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#projects" class="nav-link" data-section="projects" data-text="nav.projects"
-                            >Projects</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#skills" class="nav-link" data-section="skills" data-text="nav.skills">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="nav-link" data-section="contact" data-text="nav.contact">Contact</a>
-                    </li>
-                    <li>
-                        <select class="language-select" aria-label="Language"></select>
-                    </li>
-                </ul>
             </div>
-        </nav>
+        </header>
 
-        <noscript>
-            <p class="noscript-note">This site needs JavaScript to show its content.</p>
-        </noscript>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav data-render="mobile-nav" aria-label="Sections"></nav>
+            <div class="language-picker" data-render="language-picker-mobile"></div>
+        </div>
 
-        <section id="profile">
-            <div class="profile-picture">
-                <img class="avatar spin" data-render="profile-picture" alt="Profile picture" />
-            </div>
-            <div class="profile-texts">
-                <p class="text-1" data-text="profile.greeting"></p>
-                <p class="text-2" data-text="profile.name"></p>
-                <p class="text-3" data-render="profile-study"></p>
-                <div class="profile-buttons" data-render="profile-resume"></div>
-                <div class="profile-socials" data-render="profile-socials"></div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="section-heading">
-                <p class="text-1" data-text="about.eyebrow"></p>
-                <p class="text-2" data-text="about.heading"></p>
-            </div>
-            <div class="about-container">
-                <div class="about-picture">
-                    <img class="avatar" data-render="about-picture" alt="Me in Ueno Zoo" />
-                </div>
-                <div class="about-details">
-                    <div class="about-cards">
-                        <div class="card" data-render="about-education"></div>
-                        <div class="card" data-render="about-achievements"></div>
+        <main id="main">
+            <section id="hero">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <p class="pill" data-text="hero.eyebrow"></p>
+                        <h1 class="hero-title">
+                            <span data-text="hero.name"></span>
+                            <span class="accent" data-text="hero.handle"></span>
+                        </h1>
+                        <p class="hero-role" data-render="hero-role"></p>
+                        <p class="lead" data-text="hero.intro"></p>
+                        <div class="hero-actions" data-render="hero-actions"></div>
+                        <div class="hero-socials" data-render="hero-socials"></div>
+                        <a class="scroll-cue small" href="#about" data-render="scroll-cue"></a>
                     </div>
-                    <p class="text-5" data-text="about.intro"></p>
+                    <div class="hero-figure">
+                        <img data-render="hero-picture" alt="" width="900" height="900" fetchpriority="high" />
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="experience">
-            <div class="section-heading">
-                <p class="text-1" data-text="experience.eyebrow"></p>
-                <p class="text-2" data-text="experience.heading"></p>
-            </div>
-            <div class="experience-container" data-render="experience"></div>
-        </section>
+            <section id="about">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="section-eyebrow mono" data-text="about.eyebrow"></p>
+                        <h2 data-text="about.heading"></h2>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-portrait reveal">
+                            <img data-render="about-picture" alt="" width="1200" height="1200" loading="lazy" />
+                        </div>
+                        <div class="about-body">
+                            <p class="lead reveal" data-text="about.intro"></p>
+                            <div class="stats reveal" data-render="stats"></div>
+                            <div class="about-cards reveal" data-render="about-cards"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="coursework">
-            <div class="section-heading">
-                <p class="text-1" data-text="coursework.eyebrow"></p>
-                <p class="text-2" data-text="coursework.heading"></p>
-            </div>
-            <div class="coursework-container" data-render="coursework"></div>
-        </section>
+            <section id="experience">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="section-eyebrow mono" data-text="experience.eyebrow"></p>
+                        <h2 data-text="experience.heading"></h2>
+                    </div>
+                    <div class="timeline" data-render="experience"></div>
+                </div>
+            </section>
 
-        <section id="projects">
-            <div class="section-heading">
-                <p class="text-1" data-text="projects.eyebrow"></p>
-                <p class="text-2" data-text="projects.heading"></p>
-            </div>
-            <div class="projects-container" data-render="projects"></div>
-        </section>
+            <section id="coursework">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="section-eyebrow mono" data-text="coursework.eyebrow"></p>
+                        <h2 data-text="coursework.heading"></h2>
+                    </div>
+                    <div class="filters reveal" data-render="course-filters" role="group"></div>
+                    <div class="course-grid reveal" data-render="coursework"></div>
+                </div>
+            </section>
 
-        <section id="skills">
-            <div class="section-heading">
-                <p class="text-1" data-text="skills.eyebrow"></p>
-                <p class="text-2" data-text="skills.heading"></p>
-            </div>
-            <div class="skills-container" data-render="skills"></div>
-        </section>
+            <section id="projects">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="section-eyebrow mono" data-text="projects.eyebrow"></p>
+                        <h2 data-text="projects.heading"></h2>
+                    </div>
+                    <div class="project-grid" data-render="projects"></div>
+                </div>
+            </section>
 
-        <section id="contact">
-            <div class="section-heading">
-                <p class="text-1" data-text="contact.eyebrow"></p>
-                <p class="text-2" data-text="contact.heading"></p>
-            </div>
-            <div class="contact-container" data-render="contact"></div>
-        </section>
+            <section id="skills">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="section-eyebrow mono" data-text="skills.eyebrow"></p>
+                        <h2 data-text="skills.heading"></h2>
+                    </div>
+                    <div class="skill-grid" data-render="skills"></div>
+                </div>
+            </section>
 
-        <footer>
-            <p class="text-4" data-render="footer"></p>
+            <section id="contact">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="section-eyebrow mono" data-text="contact.eyebrow"></p>
+                        <h2 data-text="contact.heading"></h2>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-intro reveal">
+                            <p class="lead" data-text="contact.intro"></p>
+                            <div class="hero-actions" data-render="contact-actions"></div>
+                        </div>
+                        <div class="contact-list reveal" data-render="contact"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p data-render="footer"></p>
+                <div class="footer-links" data-render="footer-links"></div>
+            </div>
         </footer>
     </body>
 </html>

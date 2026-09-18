@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+
+/* Change a value here and it applies everywhere. */
+:root {
+    --font-body: "Noto Serif JP", serif;
+
+    --color-text: rgb(85, 85, 85);
+    --color-heading: rgb(0, 0, 0);
+    --color-border: rgb(53, 53, 53);
+    --color-muted: rgb(140, 140, 140);
+    --color-surface: rgb(255, 255, 255);
+    --color-tag: rgb(240, 240, 240);
+    --color-active: rgb(222, 222, 222);
+
+    --radius-card: 2rem;
+    --radius-tag: 1rem;
+
+    --nav-height: 12vh;
+    --section-padding: 0 10rem;
+    --gap-card: 2rem;
+
+    --size-avatar: 400px;
+    --size-icon: 3rem;
+
+    --text-1: 1.5rem;
+    --text-2: 3rem;
+    --text-3: 2.1rem;
+    --text-4: 1.5rem;
+    --text-5: 1rem;
+    --text-6: 1.2rem;
+    --text-nav: 1.3rem;
+    --text-tag: 0.85rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+p,
+span,
+li {
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Text sizes, from the largest heading down to body copy. */
+.text-1 {
+    font-size: var(--text-1);
+}
+
+.text-2 {
+    font-size: var(--text-2);
+}
+
+.text-3 {
+    font-size: var(--text-3);
+}
+
+.text-4 {
+    font-size: var(--text-4);
+    font-weight: 900;
+}
+
+.text-5 {
+    font-size: var(--text-5);
+}
+
+.text-6 {
+    font-size: var(--text-6);
+}
+
+.noscript-note {
+    padding: 8rem 2rem 2rem;
+    text-align: center;
+}

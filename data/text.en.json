@@ -1,0 +1,156 @@
+{
+    "meta": {
+        "title": "YueAgar_c's website",
+        "htmlLang": "en"
+    },
+
+    "nav": {
+        "logo": "YueAgar_c",
+        "profile": "Profile",
+        "about": "About",
+        "experience": "Experience",
+        "coursework": "Coursework",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact",
+        "menuWidth": "auto"
+    },
+
+    "profile": {
+        "greeting": "Console says: Hello World.",
+        "name": "I'm YueAgar_c.",
+        "study": "{year} {programme} @ {school}.",
+        "resumeButton": "View my resume"
+    },
+
+    "about": {
+        "eyebrow": "Know more",
+        "heading": "About Me!",
+        "educationTitle": "Education",
+        "school": "The Chinese University of Hong Kong",
+        "programme": "Bachelor of Science in Computer Science",
+        "minor": "Minor in Japanese Language",
+        "majorGpa": "Major GPA: {gpa}",
+        "achievementsTitle": "Achievements and Awards",
+        "intro": "Hello World. I am YueAgar_c (or Yue Ka Leung Kelvin in real life). I am a {age} years old computer science student with nearly two years of software engineering experience, and I look forward to becoming a professional software engineer."
+    },
+
+    "experience": {
+        "eyebrow": "Where I worked",
+        "heading": "Experience",
+        "current": "present"
+    },
+
+    "coursework": {
+        "eyebrow": "I took these",
+        "heading": "Courses",
+        "sourceCode": "Coursework source code"
+    },
+
+    "projects": {
+        "eyebrow": "Explore my",
+        "heading": "Projects",
+        "sourceCode": "Source code"
+    },
+
+    "skills": {
+        "eyebrow": "What I use",
+        "heading": "Skills"
+    },
+
+    "contact": {
+        "eyebrow": "Interested?",
+        "heading": "Contact Me!"
+    },
+
+    "items": {
+        "linkedin": "My LinkedIn profile",
+        "github": "My GitHub profile",
+
+        "award-cse-outstanding": "CSE Outstanding Academic Performance — Bronze Award (top 5%), 2025-26",
+        "award-deans-list": "Dean's List, 2023-24 / 2024-25 / 2025-26",
+
+        "job-10x-groupchat": {
+            "title": "Software Engineer Intern",
+            "organization": "10X Groupchat, LLC",
+            "location": "United States (remote from Hong Kong)",
+            "points": [
+                "Contributed to Tribe Chat Pro, a production chat application serving thousands of users.",
+                "Refactored JSON response structures in the API layer, cutting data transfer by over 95%.",
+                "Raised rendering performance by more than 10% in FPS through component memoization and re-render optimization.",
+                "Worked with the UI/UX design team to ship new features and keep both platforms consistent."
+            ]
+        },
+        "job-nextgen": {
+            "title": "Software Engineer Intern",
+            "organization": "NextGen Solutions Limited",
+            "location": "Hong Kong",
+            "points": [
+                "Developed and maintained the GoPingPong mobile app.",
+                "Built custom Odoo modules that let enterprise clients handle invoices quickly.",
+                "Implemented the frontend for Pivotal-AI services (OCR, image generation, chat bot and speech to text).",
+                "Designed and implemented the API for feature access control and automatic email sending in Pivotal-AI services."
+            ]
+        },
+
+        "group-computer-science": "Computer Science",
+        "group-mathematics": "Mathematics",
+        "group-japanese": "Japanese (Minor)",
+
+        "CS50x": "Introduction to Computer Science",
+        "CSCI3100": "Software Engineering",
+        "CSCI3170": "Introduction to Database Systems",
+        "ESTR3108": "Fundamentals of Artificial Intelligence",
+        "CSCI3160": "Design and Analysis of Algorithms",
+        "CSCI3150": "Introduction to Operating Systems",
+        "CSCI3130": "Formal Languages and Automata Theory",
+        "ESTR3106": "Principles of Programming Languages",
+        "CSCI2100": "Data Structures",
+        "CENG3420": "Computer Organization and Design",
+        "CSCI1130": "Introduction to Computing Using Java",
+        "ENGG2020": "Digital Logic and Systems",
+        "ENGG1110": "Problem Solving By Programming",
+        "ENGG1003": "Digital Literacy and Computational Thinking",
+        "ENGG2440": "Discrete Mathematics for Engineers",
+        "ESTR2020": "Statistics for Engineers",
+        "ESTR2018": "Probability for Engineers",
+        "ENGG1120": "Linear Algebra for Engineers",
+        "ENGG1130": "Multivariable Calculus for Engineers",
+        "MATH1510": "Calculus for Engineers",
+        "JASP3330": "Japanese Composition",
+        "JASP3200": "Selected Topics in Japanese Grammar",
+        "JASP2460": "New Practical Japanese IV",
+        "JASP2450": "New Practical Japanese III",
+        "JASP1460": "New Practical Japanese II",
+        "JASP1450": "New Practical Japanese I",
+
+        "project-booking": {
+            "title": "CUHK Venue & Equipment Booking SaaS",
+            "description": "Led full-stack development with a team of 5 and scored full marks. Set up code review standards, removed N+1 database queries and implemented role-based access control."
+        },
+        "project-hslo": {
+            "title": "Agar.io HSLO",
+            "description": "A custom client and server that drew more than 1000 players. Uses a binary WebSocket protocol and a quadtree to process over 10000 entities every 40 milliseconds. Source code is not available because the others who worked on it did not agree to share it."
+        },
+        "project-minigame": {
+            "title": "Dot Minigame",
+            "description": "Inspired by agar.io."
+        },
+
+        "skills-languages": "Programming Languages",
+        "skills-frameworks": "Frameworks",
+        "skills-libraries": "Libraries",
+        "skills-tools": "Developer Tools",
+        "skills-spoken": "Spoken Languages",
+
+        "spoken-cantonese": "Cantonese (native)",
+        "spoken-mandarin": "Mandarin (fluent)",
+        "spoken-english": "English (fluent)",
+        "spoken-japanese": "Japanese (intermediate)",
+
+        "contact-email": "Email",
+        "contact-school-email": "School email",
+        "contact-linkedin": "LinkedIn",
+        "contact-discord": "Discord"
+    }
+}

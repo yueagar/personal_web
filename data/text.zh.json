@@ -1,0 +1,156 @@
+{
+    "meta": {
+        "title": "YueAgar_c的網站",
+        "htmlLang": "zh-Hant"
+    },
+
+    "nav": {
+        "logo": "YueAgar_c",
+        "profile": "簡介",
+        "about": "關於我",
+        "experience": "工作經驗",
+        "coursework": "已修課業",
+        "projects": "專案",
+        "skills": "技能",
+        "contact": "聯絡",
+        "menuWidth": "160px"
+    },
+
+    "profile": {
+        "greeting": "控制台：你好世界。",
+        "name": "我是YueAgar_c。",
+        "study": "{school} {programme} {year}。",
+        "resumeButton": "查看我的履歷"
+    },
+
+    "about": {
+        "eyebrow": "了解更多",
+        "heading": "關於我！",
+        "educationTitle": "教育",
+        "school": "香港中文大學",
+        "programme": "計算機科學理學士",
+        "minor": "日本語言副修",
+        "majorGpa": "主修GPA：{gpa}",
+        "achievementsTitle": "成就與獎項",
+        "intro": "你好世界。我是YueAgar_c (現實中我的名字是Yue Ka Leung Kelvin)。我是一名{age}歲的計算機科學學生，擁有接近兩年的軟件工程經驗，並朝着成為專業軟件工程師的目標進發。"
+    },
+
+    "experience": {
+        "eyebrow": "我工作過的地方",
+        "heading": "工作經驗",
+        "current": "至今"
+    },
+
+    "coursework": {
+        "eyebrow": "我修讀了這些",
+        "heading": "課程",
+        "sourceCode": "課業源碼"
+    },
+
+    "projects": {
+        "eyebrow": "探索我的",
+        "heading": "專案",
+        "sourceCode": "源碼"
+    },
+
+    "skills": {
+        "eyebrow": "我使用的",
+        "heading": "技能"
+    },
+
+    "contact": {
+        "eyebrow": "感興趣嗎？",
+        "heading": "聯絡我！"
+    },
+
+    "items": {
+        "linkedin": "我的LinkedIn檔案",
+        "github": "我的GitHub檔案",
+
+        "award-cse-outstanding": "計算機科學與工程學系優秀學業表現銅獎 (首5%)，2025-26",
+        "award-deans-list": "院長嘉許名單，2023-24 / 2024-25 / 2025-26",
+
+        "job-10x-groupchat": {
+            "title": "軟件工程實習生",
+            "organization": "10X Groupchat, LLC",
+            "location": "美國 (香港遙距工作)",
+            "points": [
+                "參與開發Tribe Chat Pro，一個服務數千名用戶的正式聊天應用程式。",
+                "重構API層的JSON回應結構，將資料傳輸量減少超過95%。",
+                "透過組件記憶化及減少重繪，令渲染效能 (FPS) 提升超過10%。",
+                "與UI/UX設計團隊合作推出新功能，並保持兩個平台的一致性。"
+            ]
+        },
+        "job-nextgen": {
+            "title": "軟件工程實習生",
+            "organization": "NextGen Solutions Limited",
+            "location": "香港",
+            "points": [
+                "開發及維護GoPingPong手機應用程式。",
+                "為企業客戶建立自訂Odoo模組，讓他們快捷地處理發票。",
+                "實作Pivotal-AI服務 (文字辨識、圖像生成、聊天機械人及語音轉文字) 的前端介面。",
+                "設計及實作Pivotal-AI服務的功能權限控制與自動發送電郵的API。"
+            ]
+        },
+
+        "group-computer-science": "計算機科學",
+        "group-mathematics": "數學",
+        "group-japanese": "日本語言 (副修)",
+
+        "CS50x": "計算機科學導論",
+        "CSCI3100": "軟件工程",
+        "CSCI3170": "資料庫系統導論",
+        "ESTR3108": "人工智能基礎",
+        "CSCI3160": "演算法設計與分析",
+        "CSCI3150": "作業系統導論",
+        "CSCI3130": "形式語言與自動機理論",
+        "ESTR3106": "程式語言原理",
+        "CSCI2100": "資料結構",
+        "CENG3420": "計算機組成與設計",
+        "CSCI1130": "Java程式設計導論",
+        "ENGG2020": "數位邏輯及數字系統",
+        "ENGG1110": "程式設計與解難",
+        "ENGG1003": "數碼素養及計算思維",
+        "ENGG2440": "工程離散數學",
+        "ESTR2020": "工程統計學",
+        "ESTR2018": "工程機率論",
+        "ENGG1120": "線性代數及其工程應用",
+        "ENGG1130": "多元微積分及其工程應用",
+        "MATH1510": "微積分的工程應用",
+        "JASP3330": "日語作文",
+        "JASP3200": "日語語法專題",
+        "JASP2460": "新編實用日語IV",
+        "JASP2450": "新編實用日語III",
+        "JASP1460": "新編實用日語II",
+        "JASP1450": "新編實用日語I",
+
+        "project-booking": {
+            "title": "中大場地及器材預約SaaS",
+            "description": "帶領五人團隊進行全端開發，並取得滿分。制定程式碼審查標準、消除N+1資料庫查詢，並實作角色權限控制。"
+        },
+        "project-hslo": {
+            "title": "Agar.io HSLO",
+            "description": "自製的客戶端及伺服器，吸引超過1000名玩家。使用二進位WebSocket協定，並以四元樹每40毫秒處理超過10000個實體。由於其他參與者不同意分享源碼，因此不提供源碼連結。"
+        },
+        "project-minigame": {
+            "title": "Dot Minigame",
+            "description": "靈感來自agar.io。"
+        },
+
+        "skills-languages": "程式語言",
+        "skills-frameworks": "框架",
+        "skills-libraries": "函式庫",
+        "skills-tools": "開發工具",
+        "skills-spoken": "語言能力",
+
+        "spoken-cantonese": "廣東話 (母語)",
+        "spoken-mandarin": "普通話 (流利)",
+        "spoken-english": "英語 (流利)",
+        "spoken-japanese": "日語 (中等)",
+
+        "contact-email": "電郵",
+        "contact-school-email": "學校電郵",
+        "contact-linkedin": "LinkedIn",
+        "contact-discord": "Discord"
+    }
+}

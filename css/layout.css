@@ -1,0 +1,173 @@
+/* Navigation bars */
+#desktop-nav,
+#hamburger-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background-color: var(--color-surface);
+}
+
+#hamburger-nav {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--nav-height);
+}
+
+.nav-logo {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: var(--text-nav);
+}
+
+.nav-links a {
+    color: var(--color-heading);
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-surface);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in-out;
+}
+
+.menu-links.open {
+    max-height: 30rem;
+}
+
+.menu-links li {
+    width: 100%;
+}
+
+.menu-links a {
+    display: block;
+    padding: 0.6rem;
+    font-size: var(--text-nav);
+    color: var(--color-heading);
+}
+
+/* Sections */
+section {
+    position: relative;
+    scroll-margin-top: var(--nav-height);
+    padding: var(--nav-height) 0 4rem;
+    margin: var(--section-padding);
+    box-sizing: border-box;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    min-height: 100vh;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-heading .text-1,
+.section-heading .text-2 {
+    font-weight: 600;
+}
+
+/* Profile */
+.profile-texts {
+    text-align: center;
+}
+
+.profile-texts .text-1,
+.profile-texts .text-2 {
+    font-weight: 600;
+}
+
+.profile-buttons,
+.profile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* About */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-card);
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+    gap: var(--gap-card);
+}
+
+/* Card grids. auto-fit keeps the columns sensible at any width. */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+    gap: var(--gap-card);
+}
+
+.coursework-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    gap: var(--gap-card);
+    align-items: start;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+    gap: var(--gap-card);
+    align-items: start;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+    gap: var(--gap-card);
+    align-items: start;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+}

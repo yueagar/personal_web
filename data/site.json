@@ -329,10 +329,6 @@
         {
             "id": "stat-experience",
             "value": "~2"
-        },
-        {
-            "id": "stat-players",
-            "value": "1000+"
         }
     ]
 }

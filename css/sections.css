@@ -76,16 +76,17 @@
     height: 100%;
     border-radius: var(--radius-pill);
     object-fit: cover;
+    animation: spin 30s linear infinite;
 }
 
-/* A soft accent glow behind the portrait. */
-.hero-figure::before {
-    content: "";
-    position: absolute;
-    inset: -8%;
-    border-radius: var(--radius-pill);
-    background: radial-gradient(circle at 30% 30%, var(--color-accent-soft), transparent 70%);
-    z-index: -1;
+.hero-figure img:hover {
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    to {
+        rotate: 360deg;
+    }
 }
 
 .scroll-cue {

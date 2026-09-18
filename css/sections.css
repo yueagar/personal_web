@@ -26,6 +26,13 @@
     margin-block: 0.5rem;
 }
 
+/* Name and handle each keep their own line, and neither splits part-way.
+   keep-all stops Japanese and Chinese breaking between characters. */
+.hero-title span {
+    display: block;
+    word-break: keep-all;
+}
+
 /* The second line of the name picks up the accent colour. */
 .hero-title .accent {
     color: var(--color-accent-text);
